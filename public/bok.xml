@@ -1,0 +1,1283 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<GetRecords>
+  <record>
+    <issues>
+      <issue>
+        <onsite_checkout>0</onsite_checkout>
+        <issue_id>804852</issue_id>
+        <issuedate>2018-02-21 15:50:45</issuedate>
+        <date_due>2018-03-23 23:59:00</date_due>
+        <branchcode>RB</branchcode>
+        <lastreneweddate>2018-02-21 00:00:00</lastreneweddate>
+        <auto_renew>0</auto_renew>
+        <firstname>Nelli</firstname>
+        <borrowernumber>176019</borrowernumber>
+        <timestamp>2018-03-27 11:34:24</timestamp>
+        <barcode>RB17110017</barcode>
+        <author>Ion Diordiev</author>
+        <itemnumber>1102450</itemnumber>
+        <surname>Puzdrovskaia</surname>
+        <cardnumber>00202059</cardnumber>
+        <returndate>2018-03-27 11:34:24</returndate>
+        <renewals>1</renewals>
+        <title>Cine are aripioare?</title>
+        <biblionumber>305754</biblionumber>
+      </issue>
+      <issue>
+        <onsite_checkout>0</onsite_checkout>
+        <issue_id>908897</issue_id>
+        <issuedate>2018-05-25 10:26:19</issuedate>
+        <date_due>2018-06-25 23:59:00</date_due>
+        <branchcode>AD</branchcode>
+        <lastreneweddate>2018-05-25 10:27:26</lastreneweddate>
+        <auto_renew>0</auto_renew>
+        <firstname>Constantin</firstname>
+        <borrowernumber>77457</borrowernumber>
+        <timestamp>2018-05-25 10:47:34</timestamp>
+        <barcode>AD17110047</barcode>
+        <itemnumber>1102461</itemnumber>
+        <author>Ion Diordiev</author>
+        <surname>Ţenu</surname>
+        <cardnumber>00000265</cardnumber>
+        <returndate>2018-05-25 10:47:34</returndate>
+        <renewals>1</renewals>
+        <title>Cine are aripioare?</title>
+        <biblionumber>305754</biblionumber>
+      </issue>
+      <issue>
+        <auto_renew>0</auto_renew>
+        <issue_id>1048108</issue_id>
+        <issuedate>2018-09-20 14:33:34</issuedate>
+        <onsite_checkout>0</onsite_checkout>
+        <date_due>2018-10-05 23:59:00</date_due>
+        <branchcode>TI</branchcode>
+        <renewals>0</renewals>
+        <biblionumber>305754</biblionumber>
+        <title>Cine are aripioare?</title>
+        <barcode>TI17110015</barcode>
+        <timestamp>2019-09-14 11:18:00</timestamp>
+        <firstname>Gabriel</firstname>
+        <borrowernumber>168056</borrowernumber>
+        <returndate>2018-09-23 16:11:23</returndate>
+        <cardnumber>00180782</cardnumber>
+        <itemnumber>1102448</itemnumber>
+        <author>Ion Diordiev</author>
+        <surname>Tăbârță</surname>
+      </issue>
+      <issue>
+        <cardnumber>00175738</cardnumber>
+        <returndate>2018-01-27 11:45:34</returndate>
+        <surname>Antonova </surname>
+        <author>Ion Diordiev</author>
+        <itemnumber>1102449</itemnumber>
+        <barcode>MA17110016</barcode>
+        <timestamp>2019-09-14 11:18:00</timestamp>
+        <borrowernumber>197782</borrowernumber>
+        <firstname>Daria </firstname>
+        <biblionumber>305754</biblionumber>
+        <title>Cine are aripioare?</title>
+        <renewals>0</renewals>
+        <branchcode>MA</branchcode>
+        <date_due>2018-01-27 23:59:00</date_due>
+        <issuedate>2018-01-12 20:06:00</issuedate>
+        <issue_id>757507</issue_id>
+        <onsite_checkout>0</onsite_checkout>
+        <auto_renew>0</auto_renew>
+      </issue>
+      <issue>
+        <cardnumber>00175580</cardnumber>
+        <returndate>2018-02-12 11:01:57</returndate>
+        <surname>Ardilean</surname>
+        <author>Ion Diordiev</author>
+        <itemnumber>1102449</itemnumber>
+        <timestamp>2019-09-14 11:18:00</timestamp>
+        <barcode>MA17110016</barcode>
+        <borrowernumber>200133</borrowernumber>
+        <firstname>Adriana</firstname>
+        <biblionumber>305754</biblionumber>
+        <title>Cine are aripioare?</title>
+        <renewals>0</renewals>
+        <branchcode>MA</branchcode>
+        <date_due>2018-02-11 23:59:00</date_due>
+        <issuedate>2018-01-27 11:49:01</issuedate>
+        <issue_id>773401</issue_id>
+        <onsite_checkout>0</onsite_checkout>
+        <auto_renew>0</auto_renew>
+      </issue>
+      <issue>
+        <onsite_checkout>0</onsite_checkout>
+        <issue_id>792717</issue_id>
+        <issuedate>2018-02-12 11:05:59</issuedate>
+        <date_due>2018-02-27 23:59:00</date_due>
+        <branchcode>MA</branchcode>
+        <auto_renew>0</auto_renew>
+        <firstname>Daria </firstname>
+        <borrowernumber>197782</borrowernumber>
+        <timestamp>2019-09-14 11:18:00</timestamp>
+        <barcode>MA17110016</barcode>
+        <itemnumber>1102449</itemnumber>
+        <author>Ion Diordiev</author>
+        <surname>Antonova </surname>
+        <cardnumber>00175738</cardnumber>
+        <returndate>2018-02-27 13:18:15</returndate>
+        <renewals>0</renewals>
+        <title>Cine are aripioare?</title>
+        <biblionumber>305754</biblionumber>
+      </issue>
+      <issue>
+        <surname>Banari</surname>
+        <itemnumber>1102455</itemnumber>
+        <author>Ion Diordiev</author>
+        <returndate>2018-01-17 10:46:27</returndate>
+        <cardnumber>00233674</cardnumber>
+        <borrowernumber>225275</borrowernumber>
+        <firstname>Victor</firstname>
+        <barcode>CK17110047</barcode>
+        <timestamp>2019-09-14 11:18:00</timestamp>
+        <title>Cine are aripioare?</title>
+        <biblionumber>305754</biblionumber>
+        <renewals>0</renewals>
+        <branchcode>CK</branchcode>
+        <date_due>2018-01-18 23:59:00</date_due>
+        <onsite_checkout>0</onsite_checkout>
+        <issuedate>2018-01-03 13:59:00</issuedate>
+        <issue_id>750427</issue_id>
+        <auto_renew>0</auto_renew>
+      </issue>
+      <issue>
+        <auto_renew>0</auto_renew>
+        <branchcode>CK</branchcode>
+        <date_due>2018-06-01 23:59:00</date_due>
+        <issuedate>2018-05-17 11:47:56</issuedate>
+        <issue_id>899496</issue_id>
+        <onsite_checkout>0</onsite_checkout>
+        <biblionumber>305754</biblionumber>
+        <title>Cine are aripioare?</title>
+        <renewals>0</renewals>
+        <returndate>2018-05-31 17:17:07</returndate>
+        <cardnumber>00233677</cardnumber>
+        <surname>Busuioc</surname>
+        <author>Ion Diordiev</author>
+        <itemnumber>1102455</itemnumber>
+        <timestamp>2019-09-14 11:18:00</timestamp>
+        <barcode>CK17110047</barcode>
+        <borrowernumber>225290</borrowernumber>
+        <firstname>Bianca</firstname>
+      </issue>
+      <issue>
+        <date_due>2018-02-23 23:59:00</date_due>
+        <branchcode>RU</branchcode>
+        <onsite_checkout>0</onsite_checkout>
+        <issue_id>788103</issue_id>
+        <issuedate>2018-02-08 10:12:24</issuedate>
+        <auto_renew>0</auto_renew>
+        <itemnumber>1102457</itemnumber>
+        <author>Ion Diordiev</author>
+        <surname>Mițco </surname>
+        <returndate>2018-02-09 12:24:59</returndate>
+        <cardnumber>00224976</cardnumber>
+        <firstname>Doru</firstname>
+        <borrowernumber>222109</borrowernumber>
+        <timestamp>2019-09-14 11:18:00</timestamp>
+        <barcode>RU17110048</barcode>
+        <title>Cine are aripioare?</title>
+        <biblionumber>305754</biblionumber>
+        <renewals>0</renewals>
+      </issue>
+      <issue>
+        <branchcode>RU</branchcode>
+        <date_due>2019-03-12 23:59:00</date_due>
+        <issuedate>2019-02-25 11:01:32</issuedate>
+        <issue_id>1222489</issue_id>
+        <onsite_checkout>0</onsite_checkout>
+        <auto_renew>0</auto_renew>
+        <returndate>2019-03-04 11:58:35</returndate>
+        <itemnumber>1102457</itemnumber>
+        <author>Ion Diordiev</author>
+        <timestamp>2019-09-14 11:18:00</timestamp>
+        <barcode>RU17110048</barcode>
+        <biblionumber>305754</biblionumber>
+        <title>Cine are aripioare?</title>
+        <renewals>0</renewals>
+      </issue>
+      <issue>
+        <auto_renew>0</auto_renew>
+        <onsite_checkout>0</onsite_checkout>
+        <issuedate>2018-01-29 14:19:23</issuedate>
+        <issue_id>775620</issue_id>
+        <branchcode>DR</branchcode>
+        <date_due>2018-02-13 23:59:00</date_due>
+        <renewals>0</renewals>
+        <title>Cine are aripioare?</title>
+        <biblionumber>305754</biblionumber>
+        <borrowernumber>119735</borrowernumber>
+        <firstname>Irina</firstname>
+        <timestamp>2019-09-14 11:18:00</timestamp>
+        <barcode>DR17110051</barcode>
+        <surname>Chihaia</surname>
+        <itemnumber>1102460</itemnumber>
+        <author>Ion Diordiev</author>
+        <returndate>2018-02-15 10:31:52</returndate>
+        <cardnumber>00124132</cardnumber>
+      </issue>
+      <issue>
+        <auto_renew>0</auto_renew>
+        <onsite_checkout>0</onsite_checkout>
+        <issuedate>2019-06-03 13:54:09</issuedate>
+        <issue_id>1356082</issue_id>
+        <branchcode>DR</branchcode>
+        <date_due>2019-06-18 23:59:00</date_due>
+        <renewals>0</renewals>
+        <title>Cine are aripioare?</title>
+        <biblionumber>305754</biblionumber>
+        <borrowernumber>214165</borrowernumber>
+        <firstname>Eva</firstname>
+        <barcode>DR17110051</barcode>
+        <timestamp>2019-09-14 11:18:00</timestamp>
+        <surname>Bularga</surname>
+        <itemnumber>1102460</itemnumber>
+        <author>Ion Diordiev</author>
+        <cardnumber>00234909</cardnumber>
+        <returndate>2019-06-18 15:43:10</returndate>
+      </issue>
+      <issue>
+        <branchcode>AD</branchcode>
+        <date_due>2018-03-30 23:59:00</date_due>
+        <onsite_checkout>0</onsite_checkout>
+        <issuedate>2018-03-20 15:45:55</issuedate>
+        <issue_id>836330</issue_id>
+        <auto_renew>0</auto_renew>
+        <surname>Creţu</surname>
+        <author>Ion Diordiev</author>
+        <itemnumber>1102461</itemnumber>
+        <cardnumber>00224160</cardnumber>
+        <returndate>2018-03-22 11:30:48</returndate>
+        <borrowernumber>205473</borrowernumber>
+        <firstname>Iuvenalia</firstname>
+        <timestamp>2019-09-14 11:18:00</timestamp>
+        <barcode>AD17110047</barcode>
+        <title>Cine are aripioare?</title>
+        <biblionumber>305754</biblionumber>
+        <renewals>0</renewals>
+      </issue>
+      <issue>
+        <title>Cine are aripioare?</title>
+        <biblionumber>305754</biblionumber>
+        <renewals>0</renewals>
+        <surname>Boicenco</surname>
+        <author>Ion Diordiev</author>
+        <itemnumber>1102461</itemnumber>
+        <returndate>2018-12-06 06:30:36</returndate>
+        <cardnumber>00242082</cardnumber>
+        <borrowernumber>226605</borrowernumber>
+        <firstname>Maria-Elizaveta</firstname>
+        <barcode>AD17110047</barcode>
+        <timestamp>2019-09-14 11:18:00</timestamp>
+        <auto_renew>0</auto_renew>
+        <branchcode>AD</branchcode>
+        <date_due>2018-12-13 23:59:00</date_due>
+        <onsite_checkout>0</onsite_checkout>
+        <issuedate>2018-11-28 11:22:54</issuedate>
+        <issue_id>1121204</issue_id>
+      </issue>
+      <issue>
+        <issue_id>1130428</issue_id>
+        <issuedate>2018-12-06 15:25:25</issuedate>
+        <onsite_checkout>0</onsite_checkout>
+        <date_due>2018-12-21 23:59:00</date_due>
+        <branchcode>AD</branchcode>
+        <auto_renew>0</auto_renew>
+        <timestamp>2019-09-14 11:18:00</timestamp>
+        <barcode>AD17110047</barcode>
+        <firstname>Sava</firstname>
+        <borrowernumber>185231</borrowernumber>
+        <returndate>2018-12-17 01:47:24</returndate>
+        <cardnumber>00206245</cardnumber>
+        <author>Ion Diordiev</author>
+        <itemnumber>1102461</itemnumber>
+        <surname>Purcel</surname>
+        <renewals>0</renewals>
+        <biblionumber>305754</biblionumber>
+        <title>Cine are aripioare?</title>
+      </issue>
+      <issue>
+        <renewals>0</renewals>
+        <title>Cine are aripioare?</title>
+        <biblionumber>305754</biblionumber>
+        <borrowernumber>184988</borrowernumber>
+        <firstname>Andrei</firstname>
+        <barcode>AD17110047</barcode>
+        <timestamp>2019-09-14 11:18:00</timestamp>
+        <surname>Lungu</surname>
+        <author>Ion Diordiev</author>
+        <itemnumber>1102461</itemnumber>
+        <cardnumber>00206251</cardnumber>
+        <returndate>2019-01-09 15:58:27</returndate>
+        <auto_renew>0</auto_renew>
+        <onsite_checkout>0</onsite_checkout>
+        <issuedate>2019-01-09 15:57:12</issuedate>
+        <issue_id>1159422</issue_id>
+        <branchcode>AD</branchcode>
+        <date_due>2019-01-24 23:59:00</date_due>
+      </issue>
+      <issue>
+        <borrowernumber>121126</borrowernumber>
+        <firstname>Cătălina</firstname>
+        <barcode>AD17110047</barcode>
+        <timestamp>2019-09-14 11:18:00</timestamp>
+        <surname>Iuraş</surname>
+        <author>Ion Diordiev</author>
+        <itemnumber>1102461</itemnumber>
+        <cardnumber>00126665</cardnumber>
+        <returndate>2019-02-11 10:43:27</returndate>
+        <renewals>0</renewals>
+        <title>Cine are aripioare?</title>
+        <biblionumber>305754</biblionumber>
+        <onsite_checkout>0</onsite_checkout>
+        <issuedate>2019-02-05 15:32:46</issuedate>
+        <issue_id>1192101</issue_id>
+        <branchcode>AD</branchcode>
+        <date_due>2019-02-20 23:59:00</date_due>
+        <auto_renew>0</auto_renew>
+      </issue>
+      <issue>
+        <barcode>AD17110047</barcode>
+        <timestamp>2019-09-14 11:18:00</timestamp>
+        <borrowernumber>106736</borrowernumber>
+        <firstname>Maxim</firstname>
+        <cardnumber>00093673</cardnumber>
+        <returndate>2019-02-18 11:30:46</returndate>
+        <surname>Matveev</surname>
+        <itemnumber>1102461</itemnumber>
+        <author>Ion Diordiev</author>
+        <renewals>0</renewals>
+        <biblionumber>305754</biblionumber>
+        <title>Cine are aripioare?</title>
+        <issuedate>2019-02-13 15:18:45</issuedate>
+        <issue_id>1205030</issue_id>
+        <onsite_checkout>0</onsite_checkout>
+        <branchcode>AD</branchcode>
+        <date_due>2019-02-28 23:59:00</date_due>
+        <auto_renew>0</auto_renew>
+      </issue>
+      <issue>
+        <onsite_checkout>0</onsite_checkout>
+        <issuedate>2019-08-29 13:17:05</issuedate>
+        <issue_id>1485886</issue_id>
+        <branchcode>AD</branchcode>
+        <date_due>2019-09-13 23:59:00</date_due>
+        <auto_renew>0</auto_renew>
+        <borrowernumber>147751</borrowernumber>
+        <firstname>Iulia</firstname>
+        <timestamp>2019-09-14 11:18:00</timestamp>
+        <barcode>AD17110047</barcode>
+        <surname>Rotaraș</surname>
+        <itemnumber>1102461</itemnumber>
+        <author>Ion Diordiev</author>
+        <returndate>2019-09-10 11:10:02</returndate>
+        <cardnumber>00151187</cardnumber>
+        <renewals>0</renewals>
+        <title>Cine are aripioare?</title>
+        <biblionumber>305754</biblionumber>
+      </issue>
+      <issue>
+        <barcode>TI17110015</barcode>
+        <timestamp>2019-12-01 14:47:06</timestamp>
+        <firstname>Amelia</firstname>
+        <borrowernumber>168067</borrowernumber>
+        <cardnumber>00180660</cardnumber>
+        <returndate>2019-12-01 14:47:06</returndate>
+        <itemnumber>1102448</itemnumber>
+        <author>Ion Diordiev</author>
+        <surname>Bobrova</surname>
+        <renewals>1</renewals>
+        <biblionumber>305754</biblionumber>
+        <title>Cine are aripioare?</title>
+        <issue_id>1577369</issue_id>
+        <issuedate>2019-11-14 14:17:05</issuedate>
+        <onsite_checkout>0</onsite_checkout>
+        <date_due>2019-12-15 23:59:00</date_due>
+        <branchcode>TI</branchcode>
+        <lastreneweddate>2019-11-14 14:17:48</lastreneweddate>
+        <auto_renew>0</auto_renew>
+      </issue>
+      <issue>
+        <firstname>Bogdan</firstname>
+        <borrowernumber>219470</borrowernumber>
+        <timestamp>2020-01-09 12:00:59</timestamp>
+        <barcode>AD17110047</barcode>
+        <itemnumber>1102461</itemnumber>
+        <author>Ion Diordiev</author>
+        <surname>Lungu</surname>
+        <returndate>2020-01-09 12:00:59</returndate>
+        <cardnumber>00224339</cardnumber>
+        <renewals>0</renewals>
+        <title>Cine are aripioare?</title>
+        <biblionumber>305754</biblionumber>
+        <onsite_checkout>0</onsite_checkout>
+        <issue_id>1625198</issue_id>
+        <issuedate>2019-12-24 15:01:23</issuedate>
+        <date_due>2020-01-23 23:59:00</date_due>
+        <branchcode>AD</branchcode>
+        <auto_renew>0</auto_renew>
+      </issue>
+      <issue>
+        <title>Cine are aripioare?</title>
+        <biblionumber>305754</biblionumber>
+        <renewals>0</renewals>
+        <surname>Darii</surname>
+        <itemnumber>1102461</itemnumber>
+        <author>Ion Diordiev</author>
+        <returndate>2020-01-21 14:33:02</returndate>
+        <cardnumber>00062703</cardnumber>
+        <borrowernumber>28780</borrowernumber>
+        <firstname>Victor</firstname>
+        <barcode>AD17110047</barcode>
+        <timestamp>2020-01-21 14:33:02</timestamp>
+        <auto_renew>0</auto_renew>
+        <branchcode>AD</branchcode>
+        <date_due>2020-02-16 23:59:00</date_due>
+        <onsite_checkout>0</onsite_checkout>
+        <issuedate>2020-01-17 15:33:40</issuedate>
+        <issue_id>1647734</issue_id>
+      </issue>
+      <issue>
+        <auto_renew>0</auto_renew>
+        <issuedate>2020-01-23 15:45:45</issuedate>
+        <issue_id>1655732</issue_id>
+        <onsite_checkout>0</onsite_checkout>
+        <branchcode>AD</branchcode>
+        <date_due>2020-02-07 23:59:00</date_due>
+        <renewals>0</renewals>
+        <biblionumber>305754</biblionumber>
+        <title>Cine are aripioare?</title>
+        <timestamp>2020-01-24 09:23:16</timestamp>
+        <barcode>AD17110047</barcode>
+        <borrowernumber>202722</borrowernumber>
+        <firstname>Elina</firstname>
+        <cardnumber>00224040</cardnumber>
+        <returndate>2020-01-24 09:23:16</returndate>
+        <surname>Pascari</surname>
+        <itemnumber>1102461</itemnumber>
+        <author>Ion Diordiev</author>
+      </issue>
+      <issue>
+        <auto_renew_error>auto_too_soon</auto_renew_error>
+        <auto_renew>1</auto_renew>
+        <issue_id>1741722</issue_id>
+        <issuedate>2020-06-16 13:46:29</issuedate>
+        <onsite_checkout>0</onsite_checkout>
+        <date_due>2020-07-16 23:59:00</date_due>
+        <branchcode>AD</branchcode>
+        <renewals>0</renewals>
+        <biblionumber>305754</biblionumber>
+        <title>Cine are aripioare?</title>
+        <barcode>AD17110047</barcode>
+        <timestamp>2020-06-19 14:45:01</timestamp>
+        <firstname>Filoteea</firstname>
+        <borrowernumber>247621</borrowernumber>
+        <cardnumber>00259482</cardnumber>
+        <returndate>2020-06-19 14:45:01</returndate>
+        <itemnumber>1102461</itemnumber>
+        <author>Ion Diordiev</author>
+        <surname>Brumă</surname>
+      </issue>
+      <issue>
+        <firstname>Matteo</firstname>
+        <borrowernumber>205250</borrowernumber>
+        <timestamp>2020-10-22 13:05:23</timestamp>
+        <barcode>AD17110047</barcode>
+        <author>Ion Diordiev</author>
+        <itemnumber>1102461</itemnumber>
+        <surname>Lazarenco</surname>
+        <returndate>2020-10-22 13:05:23</returndate>
+        <cardnumber>00224148</cardnumber>
+        <renewals>0</renewals>
+        <title>Cine are aripioare?</title>
+        <biblionumber>305754</biblionumber>
+        <onsite_checkout>0</onsite_checkout>
+        <issue_id>1825780</issue_id>
+        <issuedate>2020-09-23 15:25:44</issuedate>
+        <date_due>2020-10-23 23:59:00</date_due>
+        <branchcode>AD</branchcode>
+        <auto_renew>0</auto_renew>
+      </issue>
+      <issue>
+        <auto_renew>0</auto_renew>
+        <branchcode>AD</branchcode>
+        <date_due>2020-11-26 23:59:00</date_due>
+        <issuedate>2020-10-27 10:32:38</issuedate>
+        <issue_id>1852742</issue_id>
+        <onsite_checkout>0</onsite_checkout>
+        <biblionumber>305754</biblionumber>
+        <title>Cine are aripioare?</title>
+        <renewals>0</renewals>
+        <returndate>2020-11-10 11:54:48</returndate>
+        <cardnumber>00259465</cardnumber>
+        <surname>Stati</surname>
+        <author>Ion Diordiev</author>
+        <itemnumber>1102461</itemnumber>
+        <timestamp>2020-11-10 11:54:48</timestamp>
+        <barcode>AD17110047</barcode>
+        <borrowernumber>247874</borrowernumber>
+        <firstname>Vlad</firstname>
+      </issue>
+    </issues>
+    <cn_sort></cn_sort>
+    <marcxml>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;record
+    xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
+    xsi:schemaLocation=&quot;http://www.loc.gov/MARC21/slim http://www.loc.gov/standards/marcxml/schema/MARC21slim.xsd&quot;
+    xmlns=&quot;http://www.loc.gov/MARC21/slim&quot;&gt;
+
+  &lt;leader&gt;00659nam  2200217   4500&lt;/leader&gt;
+  &lt;controlfield tag=&quot;001&quot;&gt;305754&lt;/controlfield&gt;
+  &lt;datafield tag=&quot;010&quot; ind1=&quot; &quot; ind2=&quot; &quot;&gt;
+    &lt;subfield code=&quot;a&quot;&gt;978-9975-100-78-6&lt;/subfield&gt;
+  &lt;/datafield&gt;
+  &lt;datafield tag=&quot;090&quot; ind1=&quot; &quot; ind2=&quot; &quot;&gt;
+    &lt;subfield code=&quot;a&quot;&gt;305754&lt;/subfield&gt;
+  &lt;/datafield&gt;
+  &lt;datafield tag=&quot;100&quot; ind1=&quot; &quot; ind2=&quot; &quot;&gt;
+    &lt;subfield code=&quot;a&quot;&gt;20170911d        u||y0romy50      ba&lt;/subfield&gt;
+  &lt;/datafield&gt;
+  &lt;datafield tag=&quot;101&quot; ind1=&quot; &quot; ind2=&quot; &quot;&gt;
+    &lt;subfield code=&quot;a&quot;&gt;rom&lt;/subfield&gt;
+  &lt;/datafield&gt;
+  &lt;datafield tag=&quot;102&quot; ind1=&quot; &quot; ind2=&quot; &quot;&gt;
+    &lt;subfield code=&quot;a&quot;&gt;MD&lt;/subfield&gt;
+  &lt;/datafield&gt;
+  &lt;datafield tag=&quot;105&quot; ind1=&quot; &quot; ind2=&quot; &quot;&gt;
+    &lt;subfield code=&quot;a&quot;&gt;|||||||||||||&lt;/subfield&gt;
+  &lt;/datafield&gt;
+  &lt;datafield tag=&quot;200&quot; ind1=&quot; &quot; ind2=&quot; &quot;&gt;
+    &lt;subfield code=&quot;a&quot;&gt;Cine are aripioare?&lt;/subfield&gt;
+    &lt;subfield code=&quot;f&quot;&gt;Ion Diordiev&lt;/subfield&gt;
+    &lt;subfield code=&quot;g&quot;&gt;il. : Radu Diordiev ; red. : Titus Știrbu&lt;/subfield&gt;
+  &lt;/datafield&gt;
+  &lt;datafield tag=&quot;210&quot; ind1=&quot; &quot; ind2=&quot; &quot;&gt;
+    &lt;subfield code=&quot;a&quot;&gt;Chișinău&lt;/subfield&gt;
+    &lt;subfield code=&quot;c&quot;&gt;Balacron SRL&lt;/subfield&gt;
+    &lt;subfield code=&quot;d&quot;&gt;2012&lt;/subfield&gt;
+  &lt;/datafield&gt;
+  &lt;datafield tag=&quot;215&quot; ind1=&quot; &quot; ind2=&quot; &quot;&gt;
+    &lt;subfield code=&quot;a&quot;&gt;16 p.&lt;/subfield&gt;
+    &lt;subfield code=&quot;c&quot;&gt;il.&lt;/subfield&gt;
+  &lt;/datafield&gt;
+  &lt;datafield tag=&quot;606&quot; ind1=&quot; &quot; ind2=&quot; &quot;&gt;
+    &lt;subfield code=&quot;9&quot;&gt;11460&lt;/subfield&gt;
+    &lt;subfield code=&quot;a&quot;&gt;Literatura română din R. Moldova pentru copii&lt;/subfield&gt;
+    &lt;subfield code=&quot;x&quot;&gt;Poezii&lt;/subfield&gt;
+  &lt;/datafield&gt;
+  &lt;datafield tag=&quot;675&quot; ind1=&quot; &quot; ind2=&quot; &quot;&gt;
+    &lt;subfield code=&quot;a&quot;&gt;821.135.1(478)-93-1=135.1&lt;/subfield&gt;
+  &lt;/datafield&gt;
+  &lt;datafield tag=&quot;700&quot; ind1=&quot; &quot; ind2=&quot; &quot;&gt;
+    &lt;subfield code=&quot;9&quot;&gt;37972&lt;/subfield&gt;
+    &lt;subfield code=&quot;a&quot;&gt;Diordiev&lt;/subfield&gt;
+    &lt;subfield code=&quot;b&quot;&gt;Ion&lt;/subfield&gt;
+  &lt;/datafield&gt;
+  &lt;datafield tag=&quot;702&quot; ind1=&quot; &quot; ind2=&quot; &quot;&gt;
+    &lt;subfield code=&quot;4&quot;&gt;440&lt;/subfield&gt;
+    &lt;subfield code=&quot;9&quot;&gt;23531&lt;/subfield&gt;
+    &lt;subfield code=&quot;a&quot;&gt;Diordiev&lt;/subfield&gt;
+    &lt;subfield code=&quot;b&quot;&gt;Radu&lt;/subfield&gt;
+  &lt;/datafield&gt;
+  &lt;datafield tag=&quot;702&quot; ind1=&quot; &quot; ind2=&quot; &quot;&gt;
+    &lt;subfield code=&quot;4&quot;&gt;220&lt;/subfield&gt;
+    &lt;subfield code=&quot;9&quot;&gt;90099&lt;/subfield&gt;
+    &lt;subfield code=&quot;a&quot;&gt;Știrbu&lt;/subfield&gt;
+    &lt;subfield code=&quot;b&quot;&gt;Titus&lt;/subfield&gt;
+  &lt;/datafield&gt;
+  &lt;datafield tag=&quot;942&quot; ind1=&quot; &quot; ind2=&quot; &quot;&gt;
+    &lt;subfield code=&quot;c&quot;&gt;BK&lt;/subfield&gt;
+    &lt;subfield code=&quot;0&quot;&gt;26&lt;/subfield&gt;
+  &lt;/datafield&gt;
+  &lt;datafield tag=&quot;995&quot; ind1=&quot; &quot; ind2=&quot; &quot;&gt;
+    &lt;subfield code=&quot;0&quot;&gt;0&lt;/subfield&gt;
+    &lt;subfield code=&quot;2&quot;&gt;0&lt;/subfield&gt;
+    &lt;subfield code=&quot;3&quot;&gt;0&lt;/subfield&gt;
+    &lt;subfield code=&quot;9&quot;&gt;1102448&lt;/subfield&gt;
+    &lt;subfield code=&quot;b&quot;&gt;TI&lt;/subfield&gt;
+    &lt;subfield code=&quot;c&quot;&gt;TI&lt;/subfield&gt;
+    &lt;subfield code=&quot;e&quot;&gt;SL&lt;/subfield&gt;
+    &lt;subfield code=&quot;f&quot;&gt;TI17110015&lt;/subfield&gt;
+    &lt;subfield code=&quot;g&quot;&gt;10.00&lt;/subfield&gt;
+    &lt;subfield code=&quot;h&quot;&gt;KB&lt;/subfield&gt;
+    &lt;subfield code=&quot;j&quot;&gt;TI_22196&lt;/subfield&gt;
+    &lt;subfield code=&quot;k&quot;&gt;821.135.1(478) D51&lt;/subfield&gt;
+    &lt;subfield code=&quot;m&quot;&gt;2019-11-14&lt;/subfield&gt;
+    &lt;subfield code=&quot;o&quot;&gt;0&lt;/subfield&gt;
+    &lt;subfield code=&quot;r&quot;&gt;BK&lt;/subfield&gt;
+    &lt;subfield code=&quot;s&quot;&gt;10.00&lt;/subfield&gt;
+  &lt;/datafield&gt;
+  &lt;datafield tag=&quot;995&quot; ind1=&quot; &quot; ind2=&quot; &quot;&gt;
+    &lt;subfield code=&quot;0&quot;&gt;0&lt;/subfield&gt;
+    &lt;subfield code=&quot;2&quot;&gt;0&lt;/subfield&gt;
+    &lt;subfield code=&quot;3&quot;&gt;0&lt;/subfield&gt;
+    &lt;subfield code=&quot;9&quot;&gt;1102449&lt;/subfield&gt;
+    &lt;subfield code=&quot;b&quot;&gt;MA&lt;/subfield&gt;
+    &lt;subfield code=&quot;c&quot;&gt;MA&lt;/subfield&gt;
+    &lt;subfield code=&quot;e&quot;&gt;COPII&lt;/subfield&gt;
+    &lt;subfield code=&quot;f&quot;&gt;MA17110016&lt;/subfield&gt;
+    &lt;subfield code=&quot;g&quot;&gt;10.00&lt;/subfield&gt;
+    &lt;subfield code=&quot;h&quot;&gt;KB&lt;/subfield&gt;
+    &lt;subfield code=&quot;j&quot;&gt;MA_26551&lt;/subfield&gt;
+    &lt;subfield code=&quot;k&quot;&gt;821.135.1(478) D51&lt;/subfield&gt;
+    &lt;subfield code=&quot;m&quot;&gt;2018-02-12&lt;/subfield&gt;
+    &lt;subfield code=&quot;o&quot;&gt;0&lt;/subfield&gt;
+    &lt;subfield code=&quot;r&quot;&gt;BK&lt;/subfield&gt;
+    &lt;subfield code=&quot;s&quot;&gt;10.00&lt;/subfield&gt;
+  &lt;/datafield&gt;
+  &lt;datafield tag=&quot;995&quot; ind1=&quot; &quot; ind2=&quot; &quot;&gt;
+    &lt;subfield code=&quot;0&quot;&gt;0&lt;/subfield&gt;
+    &lt;subfield code=&quot;2&quot;&gt;0&lt;/subfield&gt;
+    &lt;subfield code=&quot;3&quot;&gt;0&lt;/subfield&gt;
+    &lt;subfield code=&quot;9&quot;&gt;1102450&lt;/subfield&gt;
+    &lt;subfield code=&quot;b&quot;&gt;RB&lt;/subfield&gt;
+    &lt;subfield code=&quot;c&quot;&gt;RB&lt;/subfield&gt;
+    &lt;subfield code=&quot;e&quot;&gt;COPII&lt;/subfield&gt;
+    &lt;subfield code=&quot;f&quot;&gt;RB17110017&lt;/subfield&gt;
+    &lt;subfield code=&quot;g&quot;&gt;10.00&lt;/subfield&gt;
+    &lt;subfield code=&quot;h&quot;&gt;KB&lt;/subfield&gt;
+    &lt;subfield code=&quot;k&quot;&gt;821.135.1(478) D51&lt;/subfield&gt;
+    &lt;subfield code=&quot;m&quot;&gt;2018-02-21&lt;/subfield&gt;
+    &lt;subfield code=&quot;o&quot;&gt;0&lt;/subfield&gt;
+    &lt;subfield code=&quot;r&quot;&gt;BK&lt;/subfield&gt;
+    &lt;subfield code=&quot;s&quot;&gt;10.00&lt;/subfield&gt;
+    &lt;subfield code=&quot;t&quot;&gt;2018-01-24&lt;/subfield&gt;
+  &lt;/datafield&gt;
+  &lt;datafield tag=&quot;995&quot; ind1=&quot; &quot; ind2=&quot; &quot;&gt;
+    &lt;subfield code=&quot;0&quot;&gt;0&lt;/subfield&gt;
+    &lt;subfield code=&quot;2&quot;&gt;0&lt;/subfield&gt;
+    &lt;subfield code=&quot;9&quot;&gt;1102451&lt;/subfield&gt;
+    &lt;subfield code=&quot;b&quot;&gt;TRA&lt;/subfield&gt;
+    &lt;subfield code=&quot;c&quot;&gt;TRA&lt;/subfield&gt;
+    &lt;subfield code=&quot;e&quot;&gt;COPII&lt;/subfield&gt;
+    &lt;subfield code=&quot;f&quot;&gt;TRA17110018&lt;/subfield&gt;
+    &lt;subfield code=&quot;g&quot;&gt;10.00&lt;/subfield&gt;
+    &lt;subfield code=&quot;h&quot;&gt;KB&lt;/subfield&gt;
+    &lt;subfield code=&quot;j&quot;&gt;TRA_56798&lt;/subfield&gt;
+    &lt;subfield code=&quot;k&quot;&gt;821.135.1(478) D51&lt;/subfield&gt;
+    &lt;subfield code=&quot;n&quot;&gt;2020-05-08&lt;/subfield&gt;
+    &lt;subfield code=&quot;o&quot;&gt;0&lt;/subfield&gt;
+    &lt;subfield code=&quot;r&quot;&gt;BK&lt;/subfield&gt;
+    &lt;subfield code=&quot;s&quot;&gt;10.00&lt;/subfield&gt;
+  &lt;/datafield&gt;
+  &lt;datafield tag=&quot;995&quot; ind1=&quot; &quot; ind2=&quot; &quot;&gt;
+    &lt;subfield code=&quot;0&quot;&gt;0&lt;/subfield&gt;
+    &lt;subfield code=&quot;2&quot;&gt;0&lt;/subfield&gt;
+    &lt;subfield code=&quot;3&quot;&gt;0&lt;/subfield&gt;
+    &lt;subfield code=&quot;9&quot;&gt;1102452&lt;/subfield&gt;
+    &lt;subfield code=&quot;b&quot;&gt;OV&lt;/subfield&gt;
+    &lt;subfield code=&quot;c&quot;&gt;OV&lt;/subfield&gt;
+    &lt;subfield code=&quot;e&quot;&gt;COPII&lt;/subfield&gt;
+    &lt;subfield code=&quot;f&quot;&gt;OV17110020&lt;/subfield&gt;
+    &lt;subfield code=&quot;g&quot;&gt;10.00&lt;/subfield&gt;
+    &lt;subfield code=&quot;h&quot;&gt;KB&lt;/subfield&gt;
+    &lt;subfield code=&quot;j&quot;&gt;OV_53309&lt;/subfield&gt;
+    &lt;subfield code=&quot;k&quot;&gt;821.135.1(478) D51&lt;/subfield&gt;
+    &lt;subfield code=&quot;o&quot;&gt;0&lt;/subfield&gt;
+    &lt;subfield code=&quot;r&quot;&gt;BK&lt;/subfield&gt;
+    &lt;subfield code=&quot;s&quot;&gt;10.00&lt;/subfield&gt;
+    &lt;subfield code=&quot;t&quot;&gt;2018-01-24&lt;/subfield&gt;
+  &lt;/datafield&gt;
+  &lt;datafield tag=&quot;995&quot; ind1=&quot; &quot; ind2=&quot; &quot;&gt;
+    &lt;subfield code=&quot;0&quot;&gt;0&lt;/subfield&gt;
+    &lt;subfield code=&quot;2&quot;&gt;0&lt;/subfield&gt;
+    &lt;subfield code=&quot;3&quot;&gt;0&lt;/subfield&gt;
+    &lt;subfield code=&quot;9&quot;&gt;1102453&lt;/subfield&gt;
+    &lt;subfield code=&quot;b&quot;&gt;AI&lt;/subfield&gt;
+    &lt;subfield code=&quot;c&quot;&gt;AI&lt;/subfield&gt;
+    &lt;subfield code=&quot;e&quot;&gt;COPII&lt;/subfield&gt;
+    &lt;subfield code=&quot;f&quot;&gt;AI17110021&lt;/subfield&gt;
+    &lt;subfield code=&quot;g&quot;&gt;10.00&lt;/subfield&gt;
+    &lt;subfield code=&quot;h&quot;&gt;KB&lt;/subfield&gt;
+    &lt;subfield code=&quot;j&quot;&gt;AI_36725&lt;/subfield&gt;
+    &lt;subfield code=&quot;k&quot;&gt;821.135.1(478) D51&lt;/subfield&gt;
+    &lt;subfield code=&quot;o&quot;&gt;0&lt;/subfield&gt;
+    &lt;subfield code=&quot;r&quot;&gt;BK&lt;/subfield&gt;
+    &lt;subfield code=&quot;s&quot;&gt;10.00&lt;/subfield&gt;
+  &lt;/datafield&gt;
+  &lt;datafield tag=&quot;995&quot; ind1=&quot; &quot; ind2=&quot; &quot;&gt;
+    &lt;subfield code=&quot;0&quot;&gt;0&lt;/subfield&gt;
+    &lt;subfield code=&quot;2&quot;&gt;0&lt;/subfield&gt;
+    &lt;subfield code=&quot;9&quot;&gt;1102454&lt;/subfield&gt;
+    &lt;subfield code=&quot;b&quot;&gt;TG&lt;/subfield&gt;
+    &lt;subfield code=&quot;c&quot;&gt;TG&lt;/subfield&gt;
+    &lt;subfield code=&quot;e&quot;&gt;COPII&lt;/subfield&gt;
+    &lt;subfield code=&quot;f&quot;&gt;TG17110022&lt;/subfield&gt;
+    &lt;subfield code=&quot;g&quot;&gt;10.00&lt;/subfield&gt;
+    &lt;subfield code=&quot;h&quot;&gt;KB&lt;/subfield&gt;
+    &lt;subfield code=&quot;j&quot;&gt;TG_46709&lt;/subfield&gt;
+    &lt;subfield code=&quot;k&quot;&gt;821.135.1(478) D51&lt;/subfield&gt;
+    &lt;subfield code=&quot;o&quot;&gt;0&lt;/subfield&gt;
+    &lt;subfield code=&quot;r&quot;&gt;BK&lt;/subfield&gt;
+    &lt;subfield code=&quot;s&quot;&gt;10.00&lt;/subfield&gt;
+  &lt;/datafield&gt;
+  &lt;datafield tag=&quot;995&quot; ind1=&quot; &quot; ind2=&quot; &quot;&gt;
+    &lt;subfield code=&quot;0&quot;&gt;0&lt;/subfield&gt;
+    &lt;subfield code=&quot;2&quot;&gt;0&lt;/subfield&gt;
+    &lt;subfield code=&quot;3&quot;&gt;0&lt;/subfield&gt;
+    &lt;subfield code=&quot;9&quot;&gt;1102455&lt;/subfield&gt;
+    &lt;subfield code=&quot;b&quot;&gt;CK&lt;/subfield&gt;
+    &lt;subfield code=&quot;c&quot;&gt;CK&lt;/subfield&gt;
+    &lt;subfield code=&quot;e&quot;&gt;COPII&lt;/subfield&gt;
+    &lt;subfield code=&quot;f&quot;&gt;CK17110047&lt;/subfield&gt;
+    &lt;subfield code=&quot;g&quot;&gt;10.00&lt;/subfield&gt;
+    &lt;subfield code=&quot;h&quot;&gt;KB&lt;/subfield&gt;
+    &lt;subfield code=&quot;j&quot;&gt;CK_24769&lt;/subfield&gt;
+    &lt;subfield code=&quot;k&quot;&gt;821.135.1(478) D51&lt;/subfield&gt;
+    &lt;subfield code=&quot;m&quot;&gt;2018-05-17&lt;/subfield&gt;
+    &lt;subfield code=&quot;o&quot;&gt;0&lt;/subfield&gt;
+    &lt;subfield code=&quot;r&quot;&gt;BK&lt;/subfield&gt;
+    &lt;subfield code=&quot;s&quot;&gt;10.00&lt;/subfield&gt;
+  &lt;/datafield&gt;
+  &lt;datafield tag=&quot;995&quot; ind1=&quot; &quot; ind2=&quot; &quot;&gt;
+    &lt;subfield code=&quot;0&quot;&gt;0&lt;/subfield&gt;
+    &lt;subfield code=&quot;2&quot;&gt;0&lt;/subfield&gt;
+    &lt;subfield code=&quot;9&quot;&gt;1102456&lt;/subfield&gt;
+    &lt;subfield code=&quot;b&quot;&gt;TR&lt;/subfield&gt;
+    &lt;subfield code=&quot;c&quot;&gt;TR&lt;/subfield&gt;
+    &lt;subfield code=&quot;e&quot;&gt;ÎM&lt;/subfield&gt;
+    &lt;subfield code=&quot;f&quot;&gt;TR17110045&lt;/subfield&gt;
+    &lt;subfield code=&quot;g&quot;&gt;10.00&lt;/subfield&gt;
+    &lt;subfield code=&quot;h&quot;&gt;KB&lt;/subfield&gt;
+    &lt;subfield code=&quot;j&quot;&gt;TR_28443&lt;/subfield&gt;
+    &lt;subfield code=&quot;k&quot;&gt;821.135.1(478) D51&lt;/subfield&gt;
+    &lt;subfield code=&quot;o&quot;&gt;0&lt;/subfield&gt;
+    &lt;subfield code=&quot;r&quot;&gt;BK&lt;/subfield&gt;
+    &lt;subfield code=&quot;s&quot;&gt;10.00&lt;/subfield&gt;
+  &lt;/datafield&gt;
+  &lt;datafield tag=&quot;995&quot; ind1=&quot; &quot; ind2=&quot; &quot;&gt;
+    &lt;subfield code=&quot;0&quot;&gt;0&lt;/subfield&gt;
+    &lt;subfield code=&quot;2&quot;&gt;0&lt;/subfield&gt;
+    &lt;subfield code=&quot;3&quot;&gt;0&lt;/subfield&gt;
+    &lt;subfield code=&quot;9&quot;&gt;1102457&lt;/subfield&gt;
+    &lt;subfield code=&quot;b&quot;&gt;RU&lt;/subfield&gt;
+    &lt;subfield code=&quot;c&quot;&gt;RU&lt;/subfield&gt;
+    &lt;subfield code=&quot;e&quot;&gt;COPII&lt;/subfield&gt;
+    &lt;subfield code=&quot;f&quot;&gt;RU17110048&lt;/subfield&gt;
+    &lt;subfield code=&quot;g&quot;&gt;10.00&lt;/subfield&gt;
+    &lt;subfield code=&quot;h&quot;&gt;KB&lt;/subfield&gt;
+    &lt;subfield code=&quot;j&quot;&gt;RU_30610&lt;/subfield&gt;
+    &lt;subfield code=&quot;k&quot;&gt;821.135.1(478) D51&lt;/subfield&gt;
+    &lt;subfield code=&quot;m&quot;&gt;2019-02-25&lt;/subfield&gt;
+    &lt;subfield code=&quot;o&quot;&gt;0&lt;/subfield&gt;
+    &lt;subfield code=&quot;r&quot;&gt;BK&lt;/subfield&gt;
+    &lt;subfield code=&quot;s&quot;&gt;10.00&lt;/subfield&gt;
+  &lt;/datafield&gt;
+  &lt;datafield tag=&quot;995&quot; ind1=&quot; &quot; ind2=&quot; &quot;&gt;
+    &lt;subfield code=&quot;0&quot;&gt;0&lt;/subfield&gt;
+    &lt;subfield code=&quot;2&quot;&gt;0&lt;/subfield&gt;
+    &lt;subfield code=&quot;9&quot;&gt;1102458&lt;/subfield&gt;
+    &lt;subfield code=&quot;b&quot;&gt;BE&lt;/subfield&gt;
+    &lt;subfield code=&quot;c&quot;&gt;BE&lt;/subfield&gt;
+    &lt;subfield code=&quot;e&quot;&gt;COPII&lt;/subfield&gt;
+    &lt;subfield code=&quot;f&quot;&gt;BE17110049&lt;/subfield&gt;
+    &lt;subfield code=&quot;g&quot;&gt;10.00&lt;/subfield&gt;
+    &lt;subfield code=&quot;h&quot;&gt;KB&lt;/subfield&gt;
+    &lt;subfield code=&quot;j&quot;&gt;BE_29737&lt;/subfield&gt;
+    &lt;subfield code=&quot;k&quot;&gt;821.135.1(478) D51&lt;/subfield&gt;
+    &lt;subfield code=&quot;o&quot;&gt;0&lt;/subfield&gt;
+    &lt;subfield code=&quot;r&quot;&gt;BK&lt;/subfield&gt;
+    &lt;subfield code=&quot;s&quot;&gt;10.00&lt;/subfield&gt;
+  &lt;/datafield&gt;
+  &lt;datafield tag=&quot;995&quot; ind1=&quot; &quot; ind2=&quot; &quot;&gt;
+    &lt;subfield code=&quot;0&quot;&gt;0&lt;/subfield&gt;
+    &lt;subfield code=&quot;2&quot;&gt;0&lt;/subfield&gt;
+    &lt;subfield code=&quot;9&quot;&gt;1102459&lt;/subfield&gt;
+    &lt;subfield code=&quot;b&quot;&gt;SM&lt;/subfield&gt;
+    &lt;subfield code=&quot;c&quot;&gt;SM&lt;/subfield&gt;
+    &lt;subfield code=&quot;e&quot;&gt;COPII&lt;/subfield&gt;
+    &lt;subfield code=&quot;f&quot;&gt;SM17110050&lt;/subfield&gt;
+    &lt;subfield code=&quot;g&quot;&gt;10.00&lt;/subfield&gt;
+    &lt;subfield code=&quot;h&quot;&gt;KB&lt;/subfield&gt;
+    &lt;subfield code=&quot;j&quot;&gt;SM_38438&lt;/subfield&gt;
+    &lt;subfield code=&quot;k&quot;&gt;821.135.1(478) D51&lt;/subfield&gt;
+    &lt;subfield code=&quot;n&quot;&gt;2019-10-29&lt;/subfield&gt;
+    &lt;subfield code=&quot;o&quot;&gt;0&lt;/subfield&gt;
+    &lt;subfield code=&quot;r&quot;&gt;BK&lt;/subfield&gt;
+    &lt;subfield code=&quot;s&quot;&gt;10.00&lt;/subfield&gt;
+  &lt;/datafield&gt;
+  &lt;datafield tag=&quot;995&quot; ind1=&quot; &quot; ind2=&quot; &quot;&gt;
+    &lt;subfield code=&quot;0&quot;&gt;0&lt;/subfield&gt;
+    &lt;subfield code=&quot;2&quot;&gt;0&lt;/subfield&gt;
+    &lt;subfield code=&quot;3&quot;&gt;0&lt;/subfield&gt;
+    &lt;subfield code=&quot;9&quot;&gt;1102460&lt;/subfield&gt;
+    &lt;subfield code=&quot;b&quot;&gt;DR&lt;/subfield&gt;
+    &lt;subfield code=&quot;c&quot;&gt;DR&lt;/subfield&gt;
+    &lt;subfield code=&quot;e&quot;&gt;ÎM&lt;/subfield&gt;
+    &lt;subfield code=&quot;f&quot;&gt;DR17110051&lt;/subfield&gt;
+    &lt;subfield code=&quot;g&quot;&gt;10.00&lt;/subfield&gt;
+    &lt;subfield code=&quot;h&quot;&gt;KB&lt;/subfield&gt;
+    &lt;subfield code=&quot;j&quot;&gt;DR_34549&lt;/subfield&gt;
+    &lt;subfield code=&quot;k&quot;&gt;821.135.1(478) D51&lt;/subfield&gt;
+    &lt;subfield code=&quot;m&quot;&gt;2019-06-03&lt;/subfield&gt;
+    &lt;subfield code=&quot;o&quot;&gt;0&lt;/subfield&gt;
+    &lt;subfield code=&quot;r&quot;&gt;BK&lt;/subfield&gt;
+    &lt;subfield code=&quot;s&quot;&gt;10.00&lt;/subfield&gt;
+  &lt;/datafield&gt;
+  &lt;datafield tag=&quot;995&quot; ind1=&quot; &quot; ind2=&quot; &quot;&gt;
+    &lt;subfield code=&quot;0&quot;&gt;0&lt;/subfield&gt;
+    &lt;subfield code=&quot;2&quot;&gt;0&lt;/subfield&gt;
+    &lt;subfield code=&quot;3&quot;&gt;0&lt;/subfield&gt;
+    &lt;subfield code=&quot;5&quot;&gt;2018-01-03&lt;/subfield&gt;
+    &lt;subfield code=&quot;9&quot;&gt;1102461&lt;/subfield&gt;
+    &lt;subfield code=&quot;b&quot;&gt;AD&lt;/subfield&gt;
+    &lt;subfield code=&quot;c&quot;&gt;AD&lt;/subfield&gt;
+    &lt;subfield code=&quot;e&quot;&gt;COPII&lt;/subfield&gt;
+    &lt;subfield code=&quot;f&quot;&gt;AD17110047&lt;/subfield&gt;
+    &lt;subfield code=&quot;g&quot;&gt;10.00&lt;/subfield&gt;
+    &lt;subfield code=&quot;h&quot;&gt;KB&lt;/subfield&gt;
+    &lt;subfield code=&quot;j&quot;&gt;AD_39881&lt;/subfield&gt;
+    &lt;subfield code=&quot;k&quot;&gt;821.135.1(478) D51&lt;/subfield&gt;
+    &lt;subfield code=&quot;m&quot;&gt;2020-10-27&lt;/subfield&gt;
+    &lt;subfield code=&quot;o&quot;&gt;0&lt;/subfield&gt;
+    &lt;subfield code=&quot;r&quot;&gt;BK&lt;/subfield&gt;
+    &lt;subfield code=&quot;s&quot;&gt;10.00&lt;/subfield&gt;
+    &lt;subfield code=&quot;t&quot;&gt;2018-01-03&lt;/subfield&gt;
+  &lt;/datafield&gt;
+  &lt;datafield tag=&quot;995&quot; ind1=&quot; &quot; ind2=&quot; &quot;&gt;
+    &lt;subfield code=&quot;0&quot;&gt;0&lt;/subfield&gt;
+    &lt;subfield code=&quot;2&quot;&gt;0&lt;/subfield&gt;
+    &lt;subfield code=&quot;3&quot;&gt;0&lt;/subfield&gt;
+    &lt;subfield code=&quot;9&quot;&gt;1102462&lt;/subfield&gt;
+    &lt;subfield code=&quot;b&quot;&gt;TM&lt;/subfield&gt;
+    &lt;subfield code=&quot;c&quot;&gt;TM&lt;/subfield&gt;
+    &lt;subfield code=&quot;e&quot;&gt;COPII&lt;/subfield&gt;
+    &lt;subfield code=&quot;f&quot;&gt;TM17110049&lt;/subfield&gt;
+    &lt;subfield code=&quot;g&quot;&gt;10.00&lt;/subfield&gt;
+    &lt;subfield code=&quot;h&quot;&gt;KB&lt;/subfield&gt;
+    &lt;subfield code=&quot;j&quot;&gt;TM_44160&lt;/subfield&gt;
+    &lt;subfield code=&quot;k&quot;&gt;821.135.1(478) D51&lt;/subfield&gt;
+    &lt;subfield code=&quot;o&quot;&gt;0&lt;/subfield&gt;
+    &lt;subfield code=&quot;r&quot;&gt;BK&lt;/subfield&gt;
+    &lt;subfield code=&quot;s&quot;&gt;10.00&lt;/subfield&gt;
+  &lt;/datafield&gt;
+&lt;/record&gt;
+</marcxml>
+    <publishercode>Balacron SRL</publishercode>
+    <pages>16 p.</pages>
+    <timestamp>2020-10-27 10:32:38</timestamp>
+    <reserves>
+    </reserves>
+    <itemtype>BK</itemtype>
+    <isbn>978-9975-100-78-6</isbn>
+    <totalissues>26</totalissues>
+    <biblioitemnumber>305754</biblioitemnumber>
+    <biblionumber>305754</biblionumber>
+    <items>
+      <item>
+        <stocknumber>TI_22196</stocknumber>
+        <location>SL</location>
+        <itemlost>0</itemlost>
+        <ccode>KB</ccode>
+        <issues>2</issues>
+        <homebranch>TI</homebranch>
+        <cn_sort>8211351478_D51</cn_sort>
+        <withdrawn>0</withdrawn>
+        <timestamp>2019-12-01 14:47:06</timestamp>
+        <barcode>TI17110015</barcode>
+        <notforloan>0</notforloan>
+        <renewals>1</renewals>
+        <datelastseen>2019-12-01</datelastseen>
+        <permanent_location>SL</permanent_location>
+        <homebranchname>Filiala N. Titulescu</homebranchname>
+        <booksellerid></booksellerid>
+        <itype>BK</itype>
+        <restricted>0</restricted>
+        <datelastborrowed>2019-11-14</datelastborrowed>
+        <biblioitemnumber>305754</biblioitemnumber>
+        <itemnumber>1102448</itemnumber>
+        <holdingbranchname>Filiala N. Titulescu</holdingbranchname>
+        <price>10.00</price>
+        <replacementprice>10.00</replacementprice>
+        <holdingbranch>TI</holdingbranch>
+        <damaged>0</damaged>
+        <biblionumber>305754</biblionumber>
+        <itemcallnumber>821.135.1(478) D51</itemcallnumber>
+      </item>
+      <item>
+        <holdingbranchname>Filiala Maramureş</holdingbranchname>
+        <itemnumber>1102449</itemnumber>
+        <price>10.00</price>
+        <replacementprice>10.00</replacementprice>
+        <holdingbranch>MA</holdingbranch>
+        <biblioitemnumber>305754</biblioitemnumber>
+        <itemcallnumber>821.135.1(478) D51</itemcallnumber>
+        <biblionumber>305754</biblionumber>
+        <damaged>0</damaged>
+        <homebranchname>Filiala Maramureş</homebranchname>
+        <permanent_location>COPII</permanent_location>
+        <datelastborrowed>2018-02-12</datelastborrowed>
+        <restricted>0</restricted>
+        <itype>BK</itype>
+        <barcode>MA17110016</barcode>
+        <timestamp>2019-07-10 13:04:42</timestamp>
+        <notforloan>0</notforloan>
+        <datelastseen>2019-07-10</datelastseen>
+        <ccode>KB</ccode>
+        <issues>3</issues>
+        <location>COPII</location>
+        <itemlost>0</itemlost>
+        <stocknumber>MA_26551</stocknumber>
+        <withdrawn>0</withdrawn>
+        <homebranch>MA</homebranch>
+        <cn_sort>8211351478_D51</cn_sort>
+      </item>
+      <item>
+        <homebranch>RB</homebranch>
+        <cn_sort>8211351478_D51</cn_sort>
+        <withdrawn>0</withdrawn>
+        <replacementpricedate>2018-01-24</replacementpricedate>
+        <issues>1</issues>
+        <ccode>KB</ccode>
+        <itemlost>0</itemlost>
+        <location>COPII</location>
+        <datelastseen>2018-03-27</datelastseen>
+        <renewals>1</renewals>
+        <timestamp>2018-03-27 11:34:24</timestamp>
+        <barcode>RB17110017</barcode>
+        <notforloan>0</notforloan>
+        <restricted>0</restricted>
+        <itype>BK</itype>
+        <datelastborrowed>2018-02-21</datelastborrowed>
+        <booksellerid></booksellerid>
+        <homebranchname>Filiala L. Rebreanu</homebranchname>
+        <permanent_location>COPII</permanent_location>
+        <biblionumber>305754</biblionumber>
+        <itemcallnumber>821.135.1(478) D51</itemcallnumber>
+        <damaged>0</damaged>
+        <holdingbranch>RB</holdingbranch>
+        <price>10.00</price>
+        <holdingbranchname>Filiala L. Rebreanu</holdingbranchname>
+        <itemnumber>1102450</itemnumber>
+        <replacementprice>10.00</replacementprice>
+        <biblioitemnumber>305754</biblioitemnumber>
+      </item>
+      <item>
+        <datelastseen>2019-11-08</datelastseen>
+        <timestamp>2020-05-08 07:58:01</timestamp>
+        <notforloan>0</notforloan>
+        <barcode>TRA17110018</barcode>
+        <cn_sort>8211351478_D51</cn_sort>
+        <homebranch>TRA</homebranch>
+        <withdrawn>0</withdrawn>
+        <onloan>2020-05-08</onloan>
+        <ccode>KB</ccode>
+        <stocknumber>TRA_56798</stocknumber>
+        <location>COPII</location>
+        <itemlost>0</itemlost>
+        <biblionumber>305754</biblionumber>
+        <itemcallnumber>821.135.1(478) D51</itemcallnumber>
+        <damaged>0</damaged>
+        <holdingbranchname>Filiala Transilvania</holdingbranchname>
+        <itemnumber>1102451</itemnumber>
+        <price>10.00</price>
+        <replacementprice>10.00</replacementprice>
+        <holdingbranch>TRA</holdingbranch>
+        <biblioitemnumber>305754</biblioitemnumber>
+        <itype>BK</itype>
+        <homebranchname>Filiala Transilvania</homebranchname>
+        <permanent_location>COPII</permanent_location>
+      </item>
+      <item>
+        <datelastseen>2020-11-06</datelastseen>
+        <timestamp>2020-11-06 18:44:42</timestamp>
+        <notforloan>0</notforloan>
+        <barcode>OV17110020</barcode>
+        <cn_sort>8211351478_D51</cn_sort>
+        <homebranch>OV</homebranch>
+        <withdrawn>0</withdrawn>
+        <replacementpricedate>2018-01-24</replacementpricedate>
+        <ccode>KB</ccode>
+        <stocknumber>OV_53309</stocknumber>
+        <itemlost>0</itemlost>
+        <location>COPII</location>
+        <biblionumber>305754</biblionumber>
+        <itemcallnumber>821.135.1(478) D51</itemcallnumber>
+        <damaged>0</damaged>
+        <holdingbranch>OV</holdingbranch>
+        <holdingbranchname>Filiala Ovidius</holdingbranchname>
+        <price>10.00</price>
+        <itemnumber>1102452</itemnumber>
+        <replacementprice>10.00</replacementprice>
+        <biblioitemnumber>305754</biblioitemnumber>
+        <restricted>0</restricted>
+        <itype>BK</itype>
+        <booksellerid></booksellerid>
+        <homebranchname>Filiala Ovidius</homebranchname>
+        <permanent_location>COPII</permanent_location>
+      </item>
+      <item>
+        <location>COPII</location>
+        <itemlost>0</itemlost>
+        <stocknumber>AI_36725</stocknumber>
+        <ccode>KB</ccode>
+        <withdrawn>0</withdrawn>
+        <homebranch>AI</homebranch>
+        <cn_sort>8211351478_D51</cn_sort>
+        <timestamp>2018-03-13 21:28:51</timestamp>
+        <notforloan>0</notforloan>
+        <barcode>AI17110021</barcode>
+        <datelastseen>2018-01-11</datelastseen>
+        <homebranchname>Filiala Alba Iulia</homebranchname>
+        <restricted>0</restricted>
+        <itype>BK</itype>
+        <biblioitemnumber>305754</biblioitemnumber>
+        <price>10.00</price>
+        <holdingbranchname>Filiala Alba Iulia</holdingbranchname>
+        <replacementprice>10.00</replacementprice>
+        <itemnumber>1102453</itemnumber>
+        <holdingbranch>AI</holdingbranch>
+        <damaged>0</damaged>
+        <itemcallnumber>821.135.1(478) D51</itemcallnumber>
+        <biblionumber>305754</biblionumber>
+      </item>
+      <item>
+        <damaged>0</damaged>
+        <itemcallnumber>821.135.1(478) D51</itemcallnumber>
+        <biblionumber>305754</biblionumber>
+        <biblioitemnumber>305754</biblioitemnumber>
+        <holdingbranch>TG</holdingbranch>
+        <itemnumber>1102454</itemnumber>
+        <holdingbranchname>Filiala Târgovişte</holdingbranchname>
+        <replacementprice>10.00</replacementprice>
+        <price>10.00</price>
+        <itype>BK</itype>
+        <permanent_location>COPII</permanent_location>
+        <homebranchname>Filiala Târgovişte</homebranchname>
+        <datelastseen>2020-07-17</datelastseen>
+        <notforloan>0</notforloan>
+        <timestamp>2020-07-17 21:50:36</timestamp>
+        <barcode>TG17110022</barcode>
+        <withdrawn>0</withdrawn>
+        <cn_sort>8211351478_D51</cn_sort>
+        <homebranch>TG</homebranch>
+        <itemlost>0</itemlost>
+        <location>COPII</location>
+        <stocknumber>TG_46709</stocknumber>
+        <ccode>KB</ccode>
+      </item>
+      <item>
+        <damaged>0</damaged>
+        <itemcallnumber>821.135.1(478) D51</itemcallnumber>
+        <biblionumber>305754</biblionumber>
+        <biblioitemnumber>305754</biblioitemnumber>
+        <holdingbranchname>Filiala M. Ciakir</holdingbranchname>
+        <itemnumber>1102455</itemnumber>
+        <price>10.00</price>
+        <replacementprice>10.00</replacementprice>
+        <holdingbranch>CK</holdingbranch>
+        <datelastborrowed>2018-05-17</datelastborrowed>
+        <itype>BK</itype>
+        <restricted>0</restricted>
+        <homebranchname>Filiala M. Ciakir</homebranchname>
+        <datelastseen>2020-11-14</datelastseen>
+        <timestamp>2020-11-14 11:30:34</timestamp>
+        <barcode>CK17110047</barcode>
+        <notforloan>0</notforloan>
+        <withdrawn>0</withdrawn>
+        <homebranch>CK</homebranch>
+        <cn_sort>8211351478_D51</cn_sort>
+        <location>COPII</location>
+        <itemlost>0</itemlost>
+        <stocknumber>CK_24769</stocknumber>
+        <ccode>KB</ccode>
+        <issues>2</issues>
+      </item>
+      <item>
+        <barcode>TR17110045</barcode>
+        <timestamp>2020-07-04 15:57:20</timestamp>
+        <notforloan>0</notforloan>
+        <datelastseen>2018-09-03</datelastseen>
+        <location>ÎM</location>
+        <itemlost>0</itemlost>
+        <stocknumber>TR_28443</stocknumber>
+        <ccode>KB</ccode>
+        <withdrawn>0</withdrawn>
+        <cn_sort>8211351478_D51</cn_sort>
+        <homebranch>TR</homebranch>
+        <biblioitemnumber>305754</biblioitemnumber>
+        <price>10.00</price>
+        <holdingbranchname>Filiala Traian</holdingbranchname>
+        <itemnumber>1102456</itemnumber>
+        <replacementprice>10.00</replacementprice>
+        <holdingbranch>TR</holdingbranch>
+        <damaged>0</damaged>
+        <itemcallnumber>821.135.1(478) D51</itemcallnumber>
+        <biblionumber>305754</biblionumber>
+        <permanent_location>ÎM</permanent_location>
+        <homebranchname>Filiala Traian</homebranchname>
+        <itype>BK</itype>
+      </item>
+      <item>
+        <withdrawn>0</withdrawn>
+        <cn_sort>8211351478_D51</cn_sort>
+        <homebranch>RU</homebranch>
+        <itemlost>0</itemlost>
+        <location>COPII</location>
+        <stocknumber>RU_30610</stocknumber>
+        <issues>2</issues>
+        <ccode>KB</ccode>
+        <datelastseen>2019-03-04</datelastseen>
+        <timestamp>2019-03-04 11:58:35</timestamp>
+        <notforloan>0</notforloan>
+        <barcode>RU17110048</barcode>
+        <datelastborrowed>2019-02-25</datelastborrowed>
+        <itype>BK</itype>
+        <restricted>0</restricted>
+        <permanent_location>COPII</permanent_location>
+        <booksellerid></booksellerid>
+        <homebranchname>Filiala A. Russo</homebranchname>
+        <damaged>0</damaged>
+        <itemcallnumber>821.135.1(478) D51</itemcallnumber>
+        <biblionumber>305754</biblionumber>
+        <biblioitemnumber>305754</biblioitemnumber>
+        <holdingbranch>RU</holdingbranch>
+        <replacementprice>10.00</replacementprice>
+        <holdingbranchname>Filiala A. Russo</holdingbranchname>
+        <price>10.00</price>
+        <itemnumber>1102457</itemnumber>
+      </item>
+      <item>
+        <stocknumber>BE_29737</stocknumber>
+        <itemlost>0</itemlost>
+        <location>COPII</location>
+        <ccode>KB</ccode>
+        <cn_sort>8211351478_D51</cn_sort>
+        <homebranch>BE</homebranch>
+        <withdrawn>0</withdrawn>
+        <timestamp>2020-09-08 14:23:24</timestamp>
+        <barcode>BE17110049</barcode>
+        <notforloan>0</notforloan>
+        <datelastseen>2017-10-11</datelastseen>
+        <permanent_location>COPII</permanent_location>
+        <booksellerid></booksellerid>
+        <homebranchname>Filiala V. Belinski</homebranchname>
+        <itype>BK</itype>
+        <biblioitemnumber>305754</biblioitemnumber>
+        <holdingbranch>BE</holdingbranch>
+        <itemnumber>1102458</itemnumber>
+        <holdingbranchname>Filiala V. Belinski</holdingbranchname>
+        <price>10.00</price>
+        <replacementprice>10.00</replacementprice>
+        <damaged>0</damaged>
+        <biblionumber>305754</biblionumber>
+        <itemcallnumber>821.135.1(478) D51</itemcallnumber>
+      </item>
+      <item>
+        <notforloan>0</notforloan>
+        <timestamp>2019-10-29 17:44:20</timestamp>
+        <barcode>SM17110050</barcode>
+        <datelastseen>2019-09-24</datelastseen>
+        <ccode>KB</ccode>
+        <onloan>2019-10-29</onloan>
+        <itemlost>0</itemlost>
+        <location>COPII</location>
+        <stocknumber>SM_38438</stocknumber>
+        <withdrawn>0</withdrawn>
+        <homebranch>SM</homebranch>
+        <cn_sort>8211351478_D51</cn_sort>
+        <holdingbranch>SM</holdingbranch>
+        <replacementprice>10.00</replacementprice>
+        <holdingbranchname>Filiala Stefan cel Mare</holdingbranchname>
+        <price>10.00</price>
+        <itemnumber>1102459</itemnumber>
+        <biblioitemnumber>305754</biblioitemnumber>
+        <itemcallnumber>821.135.1(478) D51</itemcallnumber>
+        <biblionumber>305754</biblionumber>
+        <damaged>0</damaged>
+        <booksellerid></booksellerid>
+        <homebranchname>Filiala Stefan cel Mare</homebranchname>
+        <permanent_location>COPII</permanent_location>
+        <itype>BK</itype>
+      </item>
+      <item>
+        <damaged>0</damaged>
+        <itemcallnumber>821.135.1(478) D51</itemcallnumber>
+        <biblionumber>305754</biblionumber>
+        <biblioitemnumber>305754</biblioitemnumber>
+        <holdingbranch>DR</holdingbranch>
+        <holdingbranchname>Filiala M. Drăgan</holdingbranchname>
+        <price>10.00</price>
+        <replacementprice>10.00</replacementprice>
+        <itemnumber>1102460</itemnumber>
+        <datelastborrowed>2019-06-03</datelastborrowed>
+        <restricted>0</restricted>
+        <itype>BK</itype>
+        <homebranchname>Filiala M. Drăgan</homebranchname>
+        <datelastseen>2020-07-22</datelastseen>
+        <barcode>DR17110051</barcode>
+        <timestamp>2020-07-22 15:28:05</timestamp>
+        <notforloan>0</notforloan>
+        <withdrawn>0</withdrawn>
+        <homebranch>DR</homebranch>
+        <cn_sort>8211351478_D51</cn_sort>
+        <itemlost>0</itemlost>
+        <location>ÎM</location>
+        <stocknumber>DR_34549</stocknumber>
+        <issues>2</issues>
+        <ccode>KB</ccode>
+      </item>
+      <item>
+        <homebranchname>Filiala A. Donici </homebranchname>
+        <datelastborrowed>2020-10-27</datelastborrowed>
+        <restricted>0</restricted>
+        <itype>BK</itype>
+        <biblioitemnumber>305754</biblioitemnumber>
+        <holdingbranch>AD</holdingbranch>
+        <itemnumber>1102461</itemnumber>
+        <holdingbranchname>Filiala A. Donici </holdingbranchname>
+        <replacementprice>10.00</replacementprice>
+        <price>10.00</price>
+        <damaged>0</damaged>
+        <itemcallnumber>821.135.1(478) D51</itemcallnumber>
+        <biblionumber>305754</biblionumber>
+        <itemlost>0</itemlost>
+        <location>COPII</location>
+        <stocknumber>AD_39881</stocknumber>
+        <issues>14</issues>
+        <ccode>KB</ccode>
+        <replacementpricedate>2018-01-03</replacementpricedate>
+        <withdrawn>0</withdrawn>
+        <homebranch>AD</homebranch>
+        <cn_sort>8211351478_D51</cn_sort>
+        <timestamp>2020-11-10 11:54:48</timestamp>
+        <barcode>AD17110047</barcode>
+        <notforloan>0</notforloan>
+        <dateaccessioned>2018-01-03</dateaccessioned>
+        <datelastseen>2020-11-10</datelastseen>
+        <renewals>1</renewals>
+      </item>
+      <item>
+        <datelastseen>2017-10-11</datelastseen>
+        <notforloan>0</notforloan>
+        <timestamp>2018-03-13 21:28:51</timestamp>
+        <barcode>TM17110049</barcode>
+        <cn_sort>8211351478_D51</cn_sort>
+        <homebranch>TM</homebranch>
+        <withdrawn>0</withdrawn>
+        <ccode>KB</ccode>
+        <stocknumber>TM_44160</stocknumber>
+        <itemlost>0</itemlost>
+        <location>COPII</location>
+        <biblionumber>305754</biblionumber>
+        <itemcallnumber>821.135.1(478) D51</itemcallnumber>
+        <damaged>0</damaged>
+        <holdingbranch>TM</holdingbranch>
+        <holdingbranchname>Filiala Târgu Mureş</holdingbranchname>
+        <itemnumber>1102462</itemnumber>
+        <replacementprice>10.00</replacementprice>
+        <price>10.00</price>
+        <biblioitemnumber>305754</biblioitemnumber>
+        <restricted>0</restricted>
+        <itype>BK</itype>
+        <booksellerid></booksellerid>
+        <homebranchname>Filiala Târgu Mureş</homebranchname>
+        <permanent_location>COPII</permanent_location>
+      </item>
+    </items>
+  </record>
+</GetRecords>
