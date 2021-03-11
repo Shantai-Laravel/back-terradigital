@@ -219,166 +219,47 @@ class BlogCategoryController extends Controller
     public function update(Request $request, $id)
     {
         $blogCategory = BlogCategory::findOrFail($id);
-        $on_home    = 0;
-        $active     = 0;
-        $name_image = $request->get('old_icon') ?? null;
+        $banner = $request->get('old_banner') ?? null;
 
-        $imageLeft = $request->get('image_left_old') ?? null;
-        $imageRight = $request->get('image_right_old') ?? null;
-
-        if ($request->get('on_home') == 'on') { $on_home = 1; }
-        if ($request->get('active') == 'on') { $active = 1; }
-
-        if($file = $request->file('image_left')){
-            $imageLeft = uniqid(). '-' .$file->getClientOriginalName();
+        if($file = $request->file('banner')){
+            $banner = uniqid(). '-' .$file->getClientOriginalName();
             $image_resize = Image::make($file->getRealPath());
 
-            $image_resize->save(public_path('images/blogCategories/og/' .$imageLeft), 75);
+            $image_resize->save(public_path('images/blogCategories/og/' .$banner), 75);
 
-            if ($blogCategory->image_left) {
-                @unlink(public_path('images/blogCategories/og/'.$blogCategory->image_left));
+            if ($blogCategory->banner) {
+                @unlink(public_path('images/blogCategories/og/'.$blogCategory->banner));
             }
         }
 
-        if($file = $request->file('image_right')){
-            $imageRight = uniqid(). '-' .$file->getClientOriginalName();
-            $image_resize = Image::make($file->getRealPath());
-
-            $image_resize->save(public_path('images/blogCategories/og/' .$imageRight), 75);
-
-            if ($blogCategory->image_right) {
-                @unlink(public_path('images/blogCategories/og/'.$blogCategory->image_right));
-            }
-        }
-
-        if($file = $request->file('icon')){
-            $name_image = uniqid(). '-' .$file->getClientOriginalName();
-            $image_resize = Image::make($file->getRealPath());
-
-            $image_resize->save(public_path('images/blogCategories/og/' .$name_image), 75);
-
-            if ($blogCategory->icon) {
-                @unlink(public_path('images/blogCategories/og/'.$blogCategory->icon));
-            }
-        }
-
-        if($file = $request->file('icon')){
-            $name_image = uniqid(). '-' .$file->getClientOriginalName();
-            $image_resize = Image::make($file->getRealPath());
-
-            $image_resize->save(public_path('images/blogCategories/og/' .$name_image), 75);
-
-            if ($blogCategory->icon) {
-                @unlink(public_path('images/blogCategories/og/'.$blogCategory->icon));
-            }
-        }
-
-        // Banner Desktop
-        foreach ($this->langs as $lang):
-            $banner[$lang->lang] = '';
-            if ($request->file('banner_desktop_'. $lang->lang)) {
-              $banner[$lang->lang] = uniqid() . '-' . $request->file('banner_desktop_'. $lang->lang)->getClientOriginalName();
-              $request->file('banner_desktop_'. $lang->lang)->move('images/blogCategories/og', $banner[$lang->lang]);
-
-              if ($blogCategory->translationByLang($lang->id)->first()->banner_desktop) {
-                  @unlink(public_path('images/blogCategories/og/'.$blogCategory->translationByLang($lang->id)->first()->banner_desktop));
-              }
-            }else{
-                if ($request->get('old_banner_desktop_'. $lang->lang)) {
-                    $banner[$lang->lang] = $request->get('old_banner_desktop_'. $lang->lang);
-                }
-            }
-        endforeach;
-
-        foreach ($this->langs as $lang):
-            $banner_mob[$lang->lang] = '';
-            if ($request->file('banner_mobile_'. $lang->lang)) {
-              $banner_mob[$lang->lang] = uniqid() . '-' . $request->file('banner_mobile_'. $lang->lang)->getClientOriginalName();
-
-              $request->file('banner_mobile_'. $lang->lang)->move('images/blogCategories/og', $banner_mob[$lang->lang]);
-
-              if ($blogCategory->translationByLang($lang->id)->first()->banner_mobile) {
-                  @unlink(public_path('images/blogCategories/og/'.$blogCategory->translationByLang($lang->id)->first()->banner_mobile));
-              }
-            }else{
-                if ($request->get('old_banner_mobile_'. $lang->lang)) {
-                    $banner_mob[$lang->lang] = $request->get('old_banner_mobile_'. $lang->lang);
-                }
-            }
-        endforeach;
-
-        $blogCategory->on_home = $on_home;
-        $blogCategory->active = $active;
-        $blogCategory->icon = $name_image;
-        $blogCategory->image_left = $imageLeft;
-        $blogCategory->image_right = $imageRight;
-        $blogCategory->link = $request->get('main_link');
+        $blogCategory->banner = $banner;
         $blogCategory->save();
 
         foreach ($this->langs as $lang):
             $blogCategory->translations()->where('blog_category_id', $id)->where('lang_id', $lang->id)->update([
                 'name' => request('name_' . $lang->lang),
                 'description' => request('description_' . $lang->lang),
-                'banner_desktop' => $banner[$lang->lang],
-                'banner_mobile' => $banner_mob[$lang->lang],
                 'seo_text' => request('seo_text_' . $lang->lang),
                 'seo_title' => request('seo_title_' . $lang->lang),
                 'seo_description' => request('seo_description_' . $lang->lang),
                 'seo_keywords' => request('seo_keywords_' . $lang->lang),
-                'link' => request('link_' . $lang->lang),
             ]);
         endforeach;
 
-        if (request('created_item')) {
-            foreach (request('created_item') as $key => $item) {
-                if (request('title_en')[$key]) {
-                    $accordion = AccordionItem::create([
-                        'alias' => str_slug(request('title_en_' . $lang->lang)),
-                        'category_id' => $id
-                    ]);
+        session()->flash('message', 'New item has been updated!');
 
-                    foreach ($this->langs as $lang):
-                        $accordion->translations()->create([
-                            'title' => request('title_' . $lang->lang)[$key],
-                            'link' => request('link_' . $lang->lang)[$key],
-                            'lang_id' => $lang->id
-                        ]);
-                    endforeach;
-                }
-            }
+        return redirect()->back();
+    }
+
+    public function deleteBanner($id)
+    {
+        $item = BlogCategory::findOrFail($id);
+
+        if ($item->banner) {
+            @unlink(public_path('images/blogCategories/og/'.$item->banner));
+            $item->banner = null;
+            $item->save();
         }
-
-        if (request('edited_item')) {
-            foreach (request('edited_item') as $key => $item) {
-                $accordion = AccordionItem::where('id', $item)->first();
-
-                if (!is_null($accordion)) {
-                    $accordion->translations()->delete();
-
-                    foreach ($this->langs as $lang):
-                        $accordion->translations()->create([
-                            'title' => request('edited_title_' . $lang->lang)[$item],
-                            'link' => request('edited_link_' . $lang->lang)[$item],
-                            'lang_id' => $lang->id
-                        ]);
-                    endforeach;
-                }
-            }
-        }
-
-        if (request('removeItems')) {
-            foreach (request('removeItems') as $key => $item) {
-                $accordion = AccordionItem::where('id', $key)->first();
-
-                if (!is_null($accordion)) {
-                    $accordion->translations()->delete();
-                    $accordion->delete();
-                }
-            }
-        }
-
-
-        session()->flash('message', 'New item has been created!');
 
         return redirect()->back();
     }

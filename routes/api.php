@@ -24,4 +24,6 @@ Route::group(['prefix' => 'api/v2'], function(){
     Route::get('services/{lang}', 'Api\ServiceController@all');
     Route::get('service', 'Api\ServiceController@getOneService');
     Route::get('translations', 'Api\TranslationsController@all');
+
+    Route::get('promotions', 'Api\PromotionController@get');
 });

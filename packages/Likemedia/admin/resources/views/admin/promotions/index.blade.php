@@ -26,28 +26,15 @@
 <div class="card">
     <div class="card-block">
 
-        <div class="row">
-            <div class="col-md-12 text-right">
-                @php
-                    $setting = getSettings();
-                @endphp
-                @if ($setting['promotions'] == 'active')
-                    <a href="{{ url('/back/promotions/set-all-stauts') }}" class="btn btn-sm btn-success">active</a>
-                @else
-                    <a href="{{ url('/back/promotions/set-all-stauts') }}" class="btn btn-sm btn-danger">pasive</a>
-                @endif
-            </div>
-        </div>
-
         <table class="table table-hover table-striped" id="tablelistsorter">
             <thead>
                 <tr>
                     <th>#</th>
-                    <th>{{trans('variables.title_table')}}</th>
-                    <th>{{trans('variables.position_table')}}</th>
-                    <th>{{trans('variables.active_table')}}</th>
-                    <th>{{trans('variables.edit_table')}}</th>
-                    <th>{{trans('variables.delete_table')}}</th>
+                    <th>Title</th>
+                    <th>Position</th>
+                    <th>Active</th>
+                    <th>Edit</th>
+                    <th>Delete</th>
                 </tr>
             </thead>
             <tbody>

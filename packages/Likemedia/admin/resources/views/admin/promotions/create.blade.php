@@ -83,25 +83,6 @@
                     </div>
                     <div class="col-md-4">
                         <div class="row">
-                            <div class="form-group">
-                                <label>
-                                    <input class="checkbox" type="checkbox" name="homewear">
-                                    <span>Homewear</span>
-                                </label>
-                            </div>
-
-                            <div class="form-group">
-                                <label>
-                                    <input class="checkbox" type="checkbox" name="bijoux">
-                                    <span>Bijoux</span>
-                                </label>
-                            </div>
-                            <div class="col-md-12">
-                                <div class="form-group">
-                                    <label for="">Discount %</label>
-                                    <input type="text" name="discount" value="" class="form-control">
-                                </div>
-                            </div>
                             <div class="col-md-12">
                                 <div class="form-group">
                                     <label for="picture">Promotion Banner</label>

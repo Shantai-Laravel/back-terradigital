@@ -105,61 +105,11 @@
                                 @endif
                             @endforeach
                             <hr>
-                            {{-- <div class="col-md-6">
-                                <div class="form-group">
-                                    @foreach($promotion->translations as $translation)
-                                    @if($translation->lang_id == $lang->id && !is_null($translation->lang_id))
-                                        @if ($translation->banner)
-                                            <img src="{{ asset('/images/promotions/'. $translation->banner ) }}" style="height: 100px;">
-                                            <input type="hidden" name="old_image_{{ $lang->lang }}" value="{{ $translation->banner }}"/>
-                                        @else
-                                            <img src="{{ asset('/admin/img/noimage.jpg') }}" style="height: 100px;">
-                                        @endif
-                                    @endif
-                                    @endforeach
-
-                                    <label for="img-{{ $lang->lang }}">Banner desktop [{{ $lang->lang }}]</label>
-                                    <input type="file" name="image_{{ $lang->lang }}" id="img-{{ $lang->lang }}"/>
-                                </div>
-                            </div> --}}
-                            {{-- <div class="col-md-6">
-                                @foreach($promotion->translations as $translation)
-                                @if($translation->lang_id == $lang->id && !is_null($translation->lang_id))
-                                    @if ($translation->banner_mob)
-                                        <img src="{{ asset('/images/promotions/'. $translation->banner_mob ) }}" style="height: 100px;">
-                                        <input type="hidden" name="old_image_mob_{{ $lang->lang }}" value="{{ $translation->banner_mob }}"/>
-                                    @else
-                                        <img src="{{ asset('/admin/img/noimage.jpg') }}" style="height: 100px;">
-                                    @endif
-                                @endif
-                                @endforeach
-
-                                <label for="img_mob-{{ $lang->lang }}">Banner mobile [{{ $lang->lang }}]</label>
-                                <input type="file" name="image_mob_{{ $lang->lang }}" id="img_mob-{{ $lang->lang }}"/>
-                            </div> --}}
                         </div>
                         @endforeach
                         @endif
                     </div>
                     <div class="col-md-4">
-                        <div class="form-group">
-                            <label>
-                                <input class="checkbox" type="checkbox" name="homewear" {{ $promotion->homewear == 1 ? 'checked' : ''}}>
-                                <span>Homewear</span>
-                            </label>
-                        </div>
-
-                        <div class="form-group">
-                            <label>
-                                <input class="checkbox" type="checkbox" name="bijoux" {{ $promotion->bijoux == 1 ? 'checked' : ''}}>
-                                <span>Bijoux</span>
-                            </label>
-                        </div>
-                        <div class="form-group">
-                            <label for="">Discount %</label>
-                            <input type="text" name="discount" value="{{ $promotion->discount }}" class="form-control">
-                        </div>
-
                         <div class="form-group">
                             <div class="form-group">
                                 <label for="img">Promotion Banner</label>

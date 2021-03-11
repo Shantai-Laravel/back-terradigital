@@ -17,18 +17,16 @@
                             <input class="checkbox" type="checkbox" v-model="menu=item.active" @change="setMenuStatus(item)">
                             <span>Menu</span>
                         </label> -->
-
-                        <!-- <span v-if="item.type == 'tabs'">
-                            <a :href="'/back/blogs/category/' + item.id" v-if="item.blogs.length || !item.children.length"><i class="fa fa-eye"></i></a>
+                        <span v-if="item.level == 1">
+                            <!-- <a :href="'/back/blogs/category/' + item.id" v-if="item.blogs.length || !item.children.length"><i class="fa fa-eye"></i></a> -->
                             <a href="#" data-toggle="modal" @click="setCurrentCategory(item)" data-target="#addNew" v-if="!item.blogs.length && item.level < maxDepth"><i class="fa fa-plus"></i></a>
                             <a href="#" v-else><i class="fa fa-minus"></i></a>
                         </span>
-
+                        <!--
                         <span v-if="item.type == 'accordion'">
                             <a href="#" data-toggle="modal" @click="setCurrentCategory(item)" data-target="#addNew" v-if="item.level == 1"><i class="fa fa-plus"></i></a>
                             <a href="#" v-else><i class="fa fa-minus"></i></a>
                         </span> -->
-
                         <a :href="'/back/blog-categories/' + item.id + '/edit'"><i class="fa fa-edit"></i></a>
                         <a href="#" @click="remove(item)"><i class="fa fa-trash"></i></a>
                     </div>

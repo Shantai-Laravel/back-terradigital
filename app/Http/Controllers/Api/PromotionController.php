@@ -1,8 +1,6 @@
 <?php
 namespace App\Http\Controllers\Api;
 
-use App\Tag;
-use App\Article;
 use App\RealWorld\Paginate\Paginate;
 use App\RealWorld\Filters\ArticleFilter;
 use App\Http\Requests\Api\CreateArticle;
@@ -13,9 +11,8 @@ use App\Http\Controllers\Api\ApiController;
 use Illuminate\Http\Request;
 use App\Models\BlogCategory;
 use App\Models\Banner;
-use App\Models\Promotion;
 
-class ServiceController extends ApiController
+class PromotionController extends ApiController
 {
     public function initData(Request $request)
     {
@@ -35,12 +32,6 @@ class ServiceController extends ApiController
                                 ->get();
 
         $data['banners'] = Banner::get();
-
-
-        $data['promotions'] = Promotion::with(['translation'])
-                                ->where('active', 1)
-                                ->orderBy('position', 'asc')
-                                ->get();
 
         return $this->respond($data);
     }

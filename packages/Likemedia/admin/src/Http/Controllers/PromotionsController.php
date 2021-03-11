@@ -32,12 +32,6 @@ class PromotionsController extends Controller
         $toValidate['title_'.$this->lang->lang] = 'required|max:255';
         $validator = $this->validate($request, $toValidate);
 
-        $homewear = 0;
-        $bijoux    = 0;
-
-        if ($request->get('homewear') == 'on') { $homewear = 1; }
-        if ($request->get('bijoux') == 'on') { $bijoux = 1; }
-
         $img = "";
         $img_mobile = "";
 
@@ -54,9 +48,6 @@ class PromotionsController extends Controller
         $promotion = new Promotion();
         $promotion->alias = str_slug(request('title_'.$this->lang));
         $promotion->active = 1;
-        $promotion->homewear = $homewear;
-        $promotion->bijoux = $bijoux;
-        $promotion->home = 1;
         $promotion->active = 1;
         $promotion->position = 1;
         $promotion->img = $img;
@@ -97,15 +88,8 @@ class PromotionsController extends Controller
 
     public function update(Request $request, $id)
     {
-        // dd($request->all());
         $toValidate['title_'.$this->lang->lang] = 'required|max:255';
         $validator = $this->validate($request, $toValidate);
-
-        $homewear = 0;
-        $bijoux    = 0;
-
-        if ($request->get('homewear') == 'on') { $homewear = 1; }
-        if ($request->get('bijoux') == 'on') { $bijoux = 1; }
 
         $img = $request->img_old;
         $img_mobile = $request->img_old_mobile;
@@ -123,8 +107,6 @@ class PromotionsController extends Controller
         $promotion = Promotion::findOrFail($id);
         $promotion->alias = str_slug(request('title_'.$this->lang));
         $promotion->active = 1;
-        $promotion->homewear = $homewear;
-        $promotion->bijoux = $bijoux;
         $promotion->position = 1;
         $promotion->img = $img;
         $promotion->img_mobile = $img_mobile;
@@ -146,15 +128,6 @@ class PromotionsController extends Controller
                 'seo_keywords' => request('seo_keywords_' . $lang->lang)
             ]);
         endforeach;
-
-        $products = Product::where('promotion_id', $id)->get();
-        if (!empty($products)) {
-            foreach ($products as $key => $product) {
-                Product::where('promotion_id', $id)->update([
-                    'discount' => $request->discount,
-                ]);
-            }
-        }
 
         return redirect()->back();
     }

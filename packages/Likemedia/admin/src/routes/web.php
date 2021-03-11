@@ -95,7 +95,7 @@ Route::group(['middleware' => ['web']], function ()
 
         // Team Module
         Route::resource('/team', 'TeamController');
-        
+
         Route::post('/team/add/new/department', 'TeamController@addNewDepartment');
         Route::post('/team/edit/department', 'TeamController@editDepartment');
         Route::get('/team/remove/department/{id}', 'TeamController@removeDepartment');
@@ -277,6 +277,7 @@ Route::group(['middleware' => ['web']], function ()
         Route::post('/blog-categories/get-all-categories', 'BlogCategoryController@getAllCategories');
         Route::post('/blog-categories/remove-moving-category', 'BlogCategoryController@removeWithMovingCategory');
         Route::post('/blog-categories/move-blogs', 'BlogCategoryController@moveBlogs');
+        Route::get('/blog-categories/{id}/delete-bannner', 'BlogCategoryController@deleteBanner');
 
 
         Route::get('/blog-categories/removeImage/{image}/{id}', 'BlogCategoryController@removeImage');

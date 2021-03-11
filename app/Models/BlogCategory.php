@@ -17,7 +17,7 @@ class BlogCategory extends Model
                         'succesion',
                         'on_home',
                         'active',
-                        'icon',
+                        'banner',
                         'type',
                         'image_left',
                         'image_right',

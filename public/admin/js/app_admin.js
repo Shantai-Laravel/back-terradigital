@@ -96864,8 +96864,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
-//
-//
 
 
 
@@ -97080,6 +97078,31 @@ var render = function() {
                   ]),
                   _vm._v(" "),
                   _c("div", { staticClass: "col-md-5 text-right" }, [
+                    item.level == 1
+                      ? _c("span", [
+                          !item.blogs.length && item.level < _vm.maxDepth
+                            ? _c(
+                                "a",
+                                {
+                                  attrs: {
+                                    href: "#",
+                                    "data-toggle": "modal",
+                                    "data-target": "#addNew"
+                                  },
+                                  on: {
+                                    click: function($event) {
+                                      return _vm.setCurrentCategory(item)
+                                    }
+                                  }
+                                },
+                                [_c("i", { staticClass: "fa fa-plus" })]
+                              )
+                            : _c("a", { attrs: { href: "#" } }, [
+                                _c("i", { staticClass: "fa fa-minus" })
+                              ])
+                        ])
+                      : _vm._e(),
+                    _vm._v(" "),
                     _c(
                       "a",
                       {

@@ -18,7 +18,7 @@
         <div class="row">
             <form class="form-reg" method="post" action="{{ route('blog-categories.update', $category->id) }}" enctype="multipart/form-data">
                 {{ csrf_field() }} {{ method_field('PATCH') }}
-                <div class="col-md-12">
+                <div class="col-md-9">
                     <div class="tab-area">
                         @include('admin::admin.alerts')
                         <ul class="nav nav-tabs nav-tabs-bordered">
@@ -35,13 +35,12 @@
                         <input type="hidden" name="submit-status" value="false">
                         @if (!empty($langs))
                         @foreach ($langs as $key => $lang)
-                        <div class="tab-content {{ $key == 0 ? ' active-content' : '' }}" id={{ $lang->
-                            lang }}>
+                        <div class="tab-content {{ $key == 0 ? ' active-content' : '' }}" id={{ $lang->lang }}>
                             <div class="part full-part">
                                 <div class="row">
                                     <div class="col-md-12">
                                         <div class="form-group">
-                                            <label>{{trans('variables.title_table')}}[{{ $lang->lang }}]</label>
+                                            <label>Title [{{ $lang->lang }}]</label>
                                             <input type="text" name="name_{{ $lang->lang }}" class="form-control"
                                             @foreach($category->translations as $translation)
                                             @if ($translation->lang_id == $lang->id)
@@ -55,7 +54,7 @@
                                         @foreach($category->translations as $translation)
                                         @if($translation->lang_id == $lang->id && !is_null($translation->lang_id))
                                         <div class="form-group">
-                                            <label for="descr-{{ $lang->lang }}">Description [{{ $lang->lang }}]</label>
+                                            <label for="descr-{{ $lang->lang }}">Body [{{ $lang->lang }}]</label>
                                             <textarea name="description_{{ $lang->lang }}" id="body-{{ $lang->lang }}" class="form-control">{{ $translation->description }}</textarea>
                                         </div>
                                         <script>
@@ -104,48 +103,25 @@
                                         <textarea name="seo_text_{{ $lang->lang }}" height="300" class="form-control">@foreach($category->translations as $translation)@if($translation->lang_id == $lang->id){{ $translation->seo_text }}@endif @endforeach</textarea>
                                     </div>
                                 </div>
-                                <div class="row">
-                                    <hr>
-                                    <h6 class="text-center">Images</h6>
-                                    <hr>
-                                    <div class="col-md-6">
-                                        <li>
-                                            @foreach($category->translations as $translation)
-                                            @if($translation->lang_id == $lang->id && !is_null($translation->lang_id))
-                                            @if ($translation->banner_desktop)
-                                            <img src="{{ asset('images/blogCategories/og/'. $translation->banner_desktop ) }}" style="height:100px;"><br>
-                                            <input type="hidden" name="old_banner_desktop_{{ $lang->lang }}" value="{{ $translation->banner_desktop }}"/>
-                                            @else
-                                            <img src="{{ asset('admin/img/noimage.jpg') }}" style="height:100px;">
-                                            @endif
-                                            @endif
-                                            @endforeach
-                                            <label for="img-{{ $lang->lang }}">Banner desktop [{{ $lang->lang }}]</label><br>
-                                            <input type="file" name="banner_desktop_{{ $lang->lang }}" id="img-{{ $lang->lang }}"/>
-                                        </li>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <li>
-                                            @foreach($category->translations as $translation)
-                                            @if($translation->lang_id == $lang->id && !is_null($translation->lang_id))
-                                            @if ($translation->banner_mobile)
-                                            <img src="{{ asset('images/blogCategories/og/'. $translation->banner_mobile ) }}" style="height:100px;"><br>
-                                            <input type="hidden" name="old_banner_mobile_{{ $lang->lang }}" value="{{ $translation->banner_mobile }}"/>
-                                            @else
-                                            <img src="{{ asset('admin/img/noimage.jpg') }}" style="height:100px;">
-                                            @endif
-                                            @endif
-                                            @endforeach
-                                            <label for="img-{{ $lang->lang }}">Banner mobile [{{ $lang->lang }}]</label><br>
-                                            <input type="file" name="banner_mobile_{{ $lang->lang }}" id="img-{{ $lang->lang }}"/>
-                                        </li>
-                                    </div>
-                                </div>
                             </div>
                         </div>
                         @endforeach
                         @endif
                     </div>
+                </div>
+                <div class="col-md-3">
+                    <h5>Image:</h5><hr>
+                    <div class="form-group">
+                        <label for="img">Select banner</label>
+                        <input type="file" name="banner" id="banner"/><br>
+                        @if ($category->banner)
+                            <input type="hidden" name="old_banner" value="{{ $category->banner }}"/>
+                            <img src="{{ asset('/images/blogCategories/og/'. $category->banner ) }}" style="height:100px;">
+                            <a href="{{ url('/back/blog-categories/'. $category->id .'/delete-bannner') }}"><small>Delete</small></a>
+                        @else
+                            <img src="{{ asset('admin/img/noimage.jpg') }}" style="height:100px;">
+                        @endif
+                    </div> <hr>
                 </div>
 
             </div>
