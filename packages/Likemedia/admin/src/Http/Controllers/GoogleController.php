@@ -1183,16 +1183,18 @@ class GoogleController extends Controller
 
 
         $sheets = Sheets::spreadsheet(config('sheets.post_spreadsheet_id'))
-                       ->sheetById(1283622758)
+                       ->sheetById(1428212910)
                        ->all();
 
         $sheets = $this->parseSheetWithLangs($sheets);
+
+        // dd($sheets);
 
         foreach ($sheets as $key => $sheet) {
             $checkTransGroup = TranslationGroup::where('key', $sheet['group key'])->first();
 
             if (!is_null($checkTransGroup)) {
-                $checkTrans = Translation::where('key', $sheet['trans'])->first();
+                $checkTrans = Translation::where('key', $sheet['trans key'])->first();
                 if (!is_null($checkTrans)) {
                     foreach ($this->langs as $key => $lang) {
                         TranslationLine::where('translation_id', $checkTrans->id)
@@ -1202,7 +1204,7 @@ class GoogleController extends Controller
                 }else{
                     $trans = Translation::create([
                         'group_id' => $checkTransGroup->id,
-                        'key' => $sheet['trans'],
+                        'key' => $sheet['trans key'],
                     ]);
 
                     foreach ($this->langs as $key => $lang) {
