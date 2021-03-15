@@ -14,6 +14,7 @@ use Illuminate\Http\Request;
 use App\Models\BlogCategory;
 use App\Models\Banner;
 use App\Models\Promotion;
+use App\Models\StaticPage;
 
 class ServiceController extends ApiController
 {
@@ -40,6 +41,9 @@ class ServiceController extends ApiController
         $data['promotions'] = Promotion::with(['translation'])
                                 ->where('active', 1)
                                 ->orderBy('position', 'asc')
+                                ->get();
+
+        $data['pages'] = StaticPage::with(['translation'])
                                 ->get();
 
         return $this->respond($data);
