@@ -18,7 +18,8 @@ class StaticPagesController extends Controller
         ini_set('memory_limit', '-1');
         ini_set('max_execution_time', 900);
 
-        $postSpreadsheetId = '1vdB80ta4xXAqqi01r7BKcEtOxUwS0okzEL1jXKqsYqw';
+        // $postSpreadsheetId = '1vdB80ta4xXAqqi01r7BKcEtOxUwS0okzEL1jXKqsYqw';
+        $postSpreadsheetId = '1sdh4DOATWQMnZfzONCPdDOXmEyP-1hnjVAdGzUN5ihg';
         $sheetIds = Sheets::spreadsheet($postSpreadsheetId)->sheetList();
 
         foreach ($sheetIds as $key => $sheetId) {
