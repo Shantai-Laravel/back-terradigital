@@ -124,6 +124,54 @@
                     </div> <hr>
                 </div>
 
+                <h5 class="text-center">Anchors:</h5>
+                <hr>
+
+                <div class="col-md-12" id="anchors"> <hr>
+
+                    @if ($category->blogs)
+                        @foreach ($category->blogs as $key => $blog)
+                            <div>
+                                @foreach($blog->translations as $translation)
+                                    <div class="col-md-4">
+                                        <div class="form-group">
+                                            <label for="">Title[{{ $langs->find($translation->lang_id)->lang }}]</label>
+                                            <input type="text" name="title_old[{{ $blog->id }}][{{ $translation->lang_id }}]" value="{{ $translation->name }}" class="form-control">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="">Content[{{ $lang->lang }}]</label>
+                                            <textarea name="content_old[{{ $blog->id }}][{{ $translation->lang_id }}]" rows="8" cols="80" class="form-control">
+                                                {{ $translation->body }}
+                                            </textarea>
+                                        </div>
+                                        <hr>
+                                    </div>
+                                @endforeach
+                            </div>
+                        @endforeach
+                    @endif
+
+                    <div class="to-clone">
+                        @foreach ($langs as $key => $lang)
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label for="">Title[{{ $lang->lang }}]</label>
+                                    <input type="text" name="title[{{ $lang->id }}][]" class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <label for="">Content[{{ $lang->lang }}]</label>
+                                    <textarea name="content[{{ $lang->id }}][]" rows="8" cols="80" class="form-control"></textarea>
+                                </div>
+                                <hr>
+                            </div>
+                        @endforeach
+                    </div>
+
+                </div>
+                <div class="col-md-12 text-center">
+                    <span class="fa fa-plus add-new"></span>
+                </div>
+
             </div>
             <div class="row text-center">
                 <div class="col-md-12"> <br><hr>
@@ -142,14 +190,17 @@
 </footer>
 
 <script>
-    $(document).ready(function(){
-        $('.add-button').on('click', function(){
-            let blockClass = $(this).attr('data');
-            $('.' + blockClass).removeClass('hide');
-            $('.' + blockClass).addClass('show');
-            $(this).hide();
-
-        })
-    })
+    // $(document).ready(function(){
+    //     $('.add-new').on('click', function(){
+    //
+    //         var target  = $(this).parent().prev();
+    //         var child = $(this).parents().prev().find('.to-clone');
+    //         child.appendTo(target);
+    //
+    //
+    //         console.log(target, child);
+    //
+    //     })
+    // })
 </script>
 @stop

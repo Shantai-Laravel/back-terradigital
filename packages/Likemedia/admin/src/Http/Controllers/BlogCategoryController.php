@@ -218,6 +218,7 @@ class BlogCategoryController extends Controller
 
     public function update(Request $request, $id)
     {
+        // dd($request->all());
         $blogCategory = BlogCategory::findOrFail($id);
         $banner = $request->get('old_banner') ?? null;
 
@@ -246,9 +247,68 @@ class BlogCategoryController extends Controller
             ]);
         endforeach;
 
+
+        $this->addAnchor($request, $blogCategory);
+        $this->addNewAnchor($request, $blogCategory);
+
         session()->flash('message', 'New item has been updated!');
 
         return redirect()->back();
+    }
+
+    public function addAnchor($request, $blogCategory)
+    {
+        if ($request->get('title_old')) {
+            foreach ($request->get('title_old') as $key => $anchor) {
+                $blog = Blog::find($key);
+
+                if (!is_null($blog)) {
+                    $blog->translations()->delete();
+
+                    foreach ($anchor as $lang => $title) {
+                        $blog->translation()->create([
+                            'lang_id' => $lang,
+                            'name' => $title,
+                            'body' => $request->get('content_old')[$key][$lang],
+                        ]);
+                    }
+                }
+            }
+        }
+    }
+
+    public function addNewAnchor($request, $blogCategory)
+    {
+        $titles = [];
+        $content = [];
+
+        foreach ($request->get('title') as $keyLang => $newAnchor) {
+            foreach ($newAnchor as $key => $value) {
+                if ($value) {
+                    $titles[$key][$keyLang] = $value;
+                }
+            }
+        }
+
+        foreach ($request->get('content') as $keyLang => $newAnchor) {
+            foreach ($newAnchor as $key => $value) {
+                $content[$key][$keyLang] = $value;
+            }
+        }
+        foreach ($titles as $key => $anchor) {
+            $blog = new Blog();
+            $blog->alias = str_slug($anchor[2]);
+            $blog->category_id = $blogCategory->id;
+            $blog->save();
+
+            foreach ($anchor as $lang => $title) {
+                $blog->translation()->create([
+                    'lang_id' => $lang,
+                    'name' => $title,
+                    'body' => $content[$key][$lang],
+                ]);
+            }
+        }
     }
 
     public function deleteBanner($id)

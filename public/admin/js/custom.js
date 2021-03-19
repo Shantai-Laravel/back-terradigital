@@ -1,3 +1,13 @@
+$(document).ready(function(){
+    $('.add-new').on('click', function(){
+        var target  = $(this).parent().prev();
+        var child = $(this).parents().prev().find('.to-clone').clone();
+        child.find('input').val('');
+        child.find('textarea').val('');
+        child.appendTo(target);
+    })
+})
+
 $(document).ready(function() {
     $.ajaxSetup({
         headers: {

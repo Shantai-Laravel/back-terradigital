@@ -31,7 +31,7 @@ class ServiceController extends ApiController
                             ->orderby('position', 'asc')
                             ->get();
 
-        $data['servicesAll'] = BlogCategory::with(['children.translation', 'translation'])
+        $data['servicesAll'] = BlogCategory::with(['children.translation', 'translation', 'blogs.translation'])
                                 ->orderby('position', 'asc')
                                 ->get();
 
