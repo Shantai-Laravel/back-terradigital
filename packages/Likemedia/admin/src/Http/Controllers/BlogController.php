@@ -224,13 +224,11 @@ class BlogController extends Controller
     {
         $blog = Blog::findOrFail($id);
 
-        @unlink('/images/blogs/' . $blog->image);
-
         $blog->delete();
 
         session()->flash('message', 'Item has been deleted!');
 
-        return redirect()->route('blogs.index');
+        return redirect()->back();
     }
 
 }

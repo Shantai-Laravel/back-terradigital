@@ -51,7 +51,7 @@
                                         </div>
                                     </div>
                                     <div class="col-md-12">
-                                        @foreach($category->translations as $translation)
+                                        {{-- @foreach($category->translations as $translation)
                                         @if($translation->lang_id == $lang->id && !is_null($translation->lang_id))
                                         <div class="form-group">
                                             <label for="descr-{{ $lang->lang }}">Body [{{ $lang->lang }}]</label>
@@ -64,7 +64,7 @@
                                             });
                                         </script>
                                         @endif
-                                        @endforeach
+                                        @endforeach --}}
                                     </div>
                                 </div>
                                 <div class="row">
@@ -124,14 +124,22 @@
                     </div> <hr>
                 </div>
 
-                <h5 class="text-center">Anchors:</h5>
-                <hr>
+
 
                 <div class="col-md-12" id="anchors"> <hr>
-
+                    <h5 class="text-center">Anchors:</h5>
+                    <hr>
                     @if ($category->blogs)
                         @foreach ($category->blogs as $key => $blog)
-                            <div>
+                            <span class="del-btn">
+                                <form action="{{ route('blogs.destroy', $blog->id) }}" method="post">
+                                    {{ csrf_field() }} {{ method_field('DELETE') }}
+                                    <button type="submit" class="btn-link">
+                                        <a href=""><i class="fa fa-trash"></i></a>
+                                    </button>
+                                </form>
+                            </span>
+                            <div class="exist-block">
                                 @foreach($blog->translations as $translation)
                                     <div class="col-md-4">
                                         <div class="form-group">
@@ -140,13 +148,14 @@
                                         </div>
                                         <div class="form-group">
                                             <label for="">Content[{{ $lang->lang }}]</label>
-                                            <textarea name="content_old[{{ $blog->id }}][{{ $translation->lang_id }}]" rows="8" cols="80" class="form-control">
+                                            <textarea id="body-{{ uniqid() }}" name="content_old[{{ $blog->id }}][{{ $translation->lang_id }}]" rows="8" cols="80" class="form-control editor">
                                                 {{ $translation->body }}
                                             </textarea>
                                         </div>
                                         <hr>
                                     </div>
                                 @endforeach
+
                             </div>
                         @endforeach
                     @endif
@@ -160,7 +169,8 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="">Content[{{ $lang->lang }}]</label>
-                                    <textarea name="content[{{ $lang->id }}][]" rows="8" cols="80" class="form-control"></textarea>
+                                    <textarea id="body-{{ uniqid() }}" name="content[{{ $lang->id }}][]" rows="8" cols="80" class="form-control editor"></textarea>
+
                                 </div>
                                 <hr>
                             </div>
@@ -190,6 +200,14 @@
 </footer>
 
 <script>
+$(function(){
+    $('.editor').each(function(e){
+        CKEDITOR.replace( this.id, {
+            language: '{{$lang}}',
+            height: '200px'
+        });
+    });
+});
     // $(document).ready(function(){
     //     $('.add-new').on('click', function(){
     //
@@ -203,4 +221,14 @@
     //     })
     // })
 </script>
+<style media="screen">
+.exist-block{
+    position: relative;
+}
+.del-btn{
+    margin-top: -96px;
+    display: inline-block;
+    margin-left: 97%;
+}
+</style>
 @stop
