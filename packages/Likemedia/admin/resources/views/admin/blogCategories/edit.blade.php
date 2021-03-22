@@ -131,14 +131,14 @@
                     <hr>
                     @if ($category->blogs)
                         @foreach ($category->blogs as $key => $blog)
-                            <span class="del-btn">
+                            {{-- <span class="del-btn">
                                 <form action="{{ route('blogs.destroy', $blog->id) }}" method="post">
                                     {{ csrf_field() }} {{ method_field('DELETE') }}
                                     <button type="submit" class="btn-link">
                                         <a href=""><i class="fa fa-trash"></i></a>
                                     </button>
                                 </form>
-                            </span>
+                            </span> --}}
                             <div class="exist-block">
                                 @foreach($blog->translations as $translation)
                                     <div class="col-md-4">
@@ -170,7 +170,6 @@
                                 <div class="form-group">
                                     <label for="">Content[{{ $lang->lang }}]</label>
                                     <textarea id="body-{{ uniqid() }}" name="content[{{ $lang->id }}][]" rows="8" cols="80" class="form-control editor"></textarea>
-
                                 </div>
                                 <hr>
                             </div>

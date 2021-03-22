@@ -164,10 +164,11 @@ class Setup
 
     private function setLang($request)
     {
-        if ($request->segment(1)) {
-            $lang = Lang::where('lang', $request->segment(1))->first();
-            if (!is_null($lang))  self::$lang = $lang;
-        }
+        // dd('ijyhg');
+        // if ($request->segment(1)) {
+            // $lang = Lang::where('lang', $request->segment(1))->first();
+            // if (!is_null($lang))  self::$lang = $lang;
+        // }
 
         self::$langs = Lang::get();
         setcookie('lang_id', self::$lang->lang, time() + 10000000, '/');
@@ -178,7 +179,7 @@ class Setup
     private function setGeoData()
     {
         self::$country = Country::where('id', @$_COOKIE['country_id'])->where('active', 1)->first();
-        self::$lang = Lang::where('lang', @$_COOKIE['lang_id'])->first();
+        self::$lang = Lang::where('lang', 'ru')->first();
         self::$currency = Currency::where('id', @$_COOKIE['currency_id'])->first();
         self::$warehouse = Warehouse::where('id', @$_COOKIE['warehouse_id'])->first();
     }
