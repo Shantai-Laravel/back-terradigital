@@ -26,14 +26,14 @@ class ServiceController extends ApiController
             return $this->respondError("Language is not found", 500);
         }
 
-        $data['services'] = BlogCategory::with(['children.translation', 'translation'])
-                            ->where('parent_id', 0)
-                            ->orderby('position', 'asc')
-                            ->get();
-
-        $data['servicesAll'] = BlogCategory::with(['children.translation', 'translation', 'blogs.translation'])
-                                ->orderby('position', 'asc')
-                                ->get();
+        // $data['services'] = BlogCategory::with(['children.translation', 'translation'])
+        //                     ->where('parent_id', 0)
+        //                     ->orderby('position', 'asc')
+        //                     ->get();
+        //
+        // $data['servicesAll'] = BlogCategory::with(['children.translation', 'translation', 'blogs.translation'])
+        //                         ->orderby('position', 'asc')
+        //                         ->get();
 
         $data['banners'] = Banner::get();
 
