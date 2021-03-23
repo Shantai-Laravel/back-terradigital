@@ -35,7 +35,7 @@ class ServiceController extends ApiController
                             [
                                 'children.translation',
                                 'translation',
-                                'blogs.translation:blog_id,id,body'
+                                'blogs.translation:blog_id,id,body,name'
                             ])
                                 ->orderby('position', 'asc')
                                 ->get();
