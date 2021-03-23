@@ -29,7 +29,7 @@
     <script src="{{asset('admin/js/toastr.js')}}"></script>
     <script src="{{asset('admin/js/jquery.tablednd_0_5.js')}}"></script>
     <script src="{{asset('admin/js/custom.js?'.uniqid())}}"></script>
-    <script src="{{asset('admin/js/ckeditor/ckeditor.js')}}"></script>
+    <script src="{{asset('admin/js/ckeditor/ckeditor.js?'.uniqid())}}"></script>
     <script src="{{asset('admin/js/jquery.mjs.nestedSortable.js')}}"></script>
     <script src="{{asset('admin/js/jquery.nestable.js')}}"></script>
     <script src="{{asset('admin/js/validation.js')}}"></script>
