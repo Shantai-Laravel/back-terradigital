@@ -11,7 +11,7 @@ CKEDITOR.editorConfig = function( config ) {
     config.height = 350;
     // config.removePlugins = 'htmldataprocessor';
     config.allowedContent = true;
-    config.enterMode = CKEDITOR.ENTER_BR;
+    config.enterMode = CKEDITOR.ENTER_P;
     // config.extraPlugins = 'btgrid';
     // config.extraPlugins = 'uploadimage';
 

@@ -26,29 +26,33 @@ class ServiceController extends ApiController
             return $this->respondError("Language is not found", 500);
         }
 
-        // $data['services'] = BlogCategory::with(['children.translation', 'translation'])
-        //                     ->where('parent_id', 0)
-        //                     ->orderby('position', 'asc')
-        //                     ->get();
+        $data['services'] = BlogCategory::with(['children.translation', 'translation'])
+                            ->where('parent_id', 0)
+                            ->orderby('position', 'asc')
+                            ->get();
 
-        $data['servicesAll'] = BlogCategory::with(['children.translation', 'translation', 'blogs.translation'])
+        $data['servicesAll'] = BlogCategory::with(
+                            [
+                                'children.translation',
+                                'translation',
+                                'blogs.translation:blog_id,id,body'
+                            ])
                                 ->orderby('position', 'asc')
                                 ->get();
 
-        // $data['banners'] = Banner::get();
-        //
-        //
-        // $data['promotions'] = Promotion::with(['translation'])
-        //                         ->where('active', 1)
-        //                         ->orderBy('position', 'asc')
-        //                         ->get();
-        //
-        // $data['pages'] = StaticPage::with(['translation'])
-        //                         ->get();
+        $data['banners'] = Banner::get();
 
 
-        return $data;
-        // return $this->respond($data);
+        $data['promotions'] = Promotion::with(['translation'])
+                                ->where('active', 1)
+                                ->orderBy('position', 'asc')
+                                ->get();
+
+        $data['pages'] = StaticPage::with(['translation'])
+                                ->get();
+
+
+        return $this->respond($data);
     }
 
     public function all($lang)
