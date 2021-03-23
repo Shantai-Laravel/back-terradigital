@@ -18,9 +18,10 @@ class StaticPagesController extends Controller
         ini_set('memory_limit', '-1');
         ini_set('max_execution_time', 900);
 
-        // $postSpreadsheetId = '1vdB80ta4xXAqqi01r7BKcEtOxUwS0okzEL1jXKqsYqw';
         $postSpreadsheetId = '1sdh4DOATWQMnZfzONCPdDOXmEyP-1hnjVAdGzUN5ihg';
         $sheetIds = Sheets::spreadsheet($postSpreadsheetId)->sheetList();
+
+        // dd($sheetIds);
 
         foreach ($sheetIds as $key => $sheetId) {
             if ($key != '1603993476') {
@@ -41,18 +42,25 @@ class StaticPagesController extends Controller
                $page->translations()->delete();
 
                foreach ($this->langs as $key => $lang) {
-                    $parsedBody = '';
-                    Model::$lang = $lang->id;
-                    \App::setLocale($lang->lang);
 
-                    foreach ($sheets as $key => $sheet) {
-                       $parsedBody .= $sheet['OpenTag'];
-                       $parsedBody .= trans('vars.'.$sheet['Texts']);
-                       $parsedBody .= $sheet['CloseTag'];
-                    }
+                        $parsedBody = '';
+                        Model::$lang = $lang->id;
+                        \App::setLocale($lang->lang);
+
+                        foreach ($sheets as $key => $sheet) {
+                            if ($key !== 1) {
+                               $parsedBody .= $sheet['OpenTag'];
+                               $parsedBody .= trans('vars.'.$sheet['Texts']);
+                               $parsedBody .= $sheet['CloseTag'];
+                           }else{
+                               $name = trans('vars.'.$sheet['Texts']);
+                           }
+                        }
+
+
                     $page->translations()->create([
                       'lang_id' => $lang->id,
-                      'name' => $sheetId,
+                      'name' => $name,
                       'body' => $parsedBody,
                     ]);
                }

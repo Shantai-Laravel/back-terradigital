@@ -39,6 +39,7 @@
                         {{ $key + 1 }}
                     </td>
                     <td>
+
                         {{ $page->translation()->first()->name }}
                     </td>
                     <td>
