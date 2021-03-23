@@ -46,7 +46,9 @@ class ServiceController extends ApiController
         $data['pages'] = StaticPage::with(['translation'])
                                 ->get();
 
-        return $this->respond($data);
+
+        return $data;
+        // return $this->respond($data);
     }
 
     public function all($lang)
