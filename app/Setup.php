@@ -171,6 +171,7 @@ class Setup
         // }
 
         self::$langs = Lang::get();
+        self::$lang = Lang::where('default', 1)->first();
         setcookie('lang_id', self::$lang->lang, time() + 10000000, '/');
         session(['applocale' => self::$lang->lang]);
         \App::setLocale(self::$lang->lang);
