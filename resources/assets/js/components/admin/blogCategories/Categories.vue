@@ -27,6 +27,7 @@
                             <a href="#" data-toggle="modal" @click="setCurrentCategory(item)" data-target="#addNew" v-if="item.level == 1"><i class="fa fa-plus"></i></a>
                             <a href="#" v-else><i class="fa fa-minus"></i></a>
                         </span> -->
+                        <input type="text" class="input-short-code" :value="item.short_code" disabled>
                         <a :href="'/back/blog-categories/' + item.id + '/edit'"><i class="fa fa-edit"></i></a>
                         <a href="#" @click="remove(item)"><i class="fa fa-trash"></i></a>
                     </div>
@@ -314,3 +315,11 @@ export default {
     },
 }
 </script>
+
+<style media="screen">
+    .input-short-code{
+        border: none;
+        font-size: 12px;
+        padding: 5px 10px;
+    }
+</style>

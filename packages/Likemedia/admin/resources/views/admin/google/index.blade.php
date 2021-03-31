@@ -98,9 +98,24 @@
             <label for="">Step 5</label>
             <a href="{{ url('/back/google-api/upload-images') }}" class="btn btn-primary btn-block">Upload Images</a>
         </div>
+
+    </div>
+    <hr>
+    <div class="row">
+        <div class="col-md-12">
+            <h6>Translations:</h6>
+        </div>
         <div class="col-md-2">
-            <label for="">Step 6</label>
-            <a href="{{ url('/back/google-api/upload-translations') }}" class="btn btn-primary btn-block">Upload Translation</a>
+            <label for="">Step 1</label>
+            <a href="{{ url('/back/google-api/upload-translations') }}" class="btn btn-primary btn-block">Upload Translations</a>
+        </div>
+        <div class="col-md-2">
+            <label for="">Step 2</label>
+            <a href="{{ url('/back/google-api/upload-translations-services') }}" class="btn btn-primary btn-block">Services Translations</a>
+        </div>
+        <div class="col-md-2">
+            <label for="">Step 3</label>
+            <a href="{{ url('/back/google-api/upload-services') }}" class="btn btn-primary btn-block">Upload Services</a>
         </div>
     </div>
     <hr>

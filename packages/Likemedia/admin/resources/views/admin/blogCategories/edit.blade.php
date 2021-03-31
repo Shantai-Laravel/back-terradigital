@@ -111,6 +111,12 @@
                 </div>
                 <div class="col-md-3">
                     <h5>Image:</h5><hr>
+
+                    <div class="form-group">
+                        <label for="short_code">Short Code</label>
+                        <input type="text" name="short_code" id="short_code" class="form-control" value="{{ $category->short_code }}" required/>
+                    </div> <hr>
+
                     <div class="form-group">
                         <label for="img">Select banner</label>
                         <input type="file" name="banner" id="banner"/><br>
@@ -123,8 +129,6 @@
                         @endif
                     </div> <hr>
                 </div>
-
-
 
                 <div class="col-md-12" id="anchors"> <hr>
                     <h5 class="text-center">Anchors:</h5>

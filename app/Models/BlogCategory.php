@@ -11,7 +11,7 @@ class BlogCategory extends Model
     protected $fillable = [
                         'parent_id',
                         'alias',
-                        'link',
+                        'short_code',
                         'level',
                         'position',
                         'succesion',

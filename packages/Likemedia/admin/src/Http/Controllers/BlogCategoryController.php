@@ -218,7 +218,7 @@ class BlogCategoryController extends Controller
 
     public function update(Request $request, $id)
     {
-        // dd($request->all());
+
         $blogCategory = BlogCategory::findOrFail($id);
         $banner = $request->get('old_banner') ?? null;
 
@@ -234,6 +234,7 @@ class BlogCategoryController extends Controller
         }
 
         $blogCategory->banner = $banner;
+        $blogCategory->short_code = $request->get('short_code');
         $blogCategory->save();
 
         foreach ($this->langs as $lang):

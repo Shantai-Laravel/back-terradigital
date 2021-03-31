@@ -33,6 +33,8 @@ use App\Models\Set;
 use App\Models\SetProducts;
 use App\Models\PromotionProduct;
 use App\Models\PromotionSet;
+use App\Models\BlogCategory;
+use App\Models\Blog;
 use GuzzleHttp\Client;
 use Revolution\Google\Sheets\Facades\Sheets;
 use Edujugon\GoogleAds\GoogleAds;
@@ -40,6 +42,8 @@ use Google\AdsApi\AdWords\v201809\cm\CampaignService;
 
 use MOIREI\GoogleMerchantApi\Facades\ProductApi;
 use MOIREI\GoogleMerchantApi\Facades\OrderApi;
+
+use Admin\Services\ServiceParser;
 
 use Session;
 
@@ -1612,4 +1616,146 @@ class GoogleController extends Controller
 
         return view('admin::admin.google.progressBar');
     }
+
+
+    /**
+     * Upload Services from sheets
+     */
+     public function uploadServicesTranslations()
+     {
+         $data = 'Services Translations';
+         $view = view('admin::admin.google.progressBar', compact('data'));
+         echo $view->render();
+
+         $sheets =  Sheets::spreadsheet('1MvijgzhraJhOSiaqmAXEOkXReZHxO2IyRfoEg19X7c4')
+                        ->sheetById(5462719)
+                        ->all();
+
+         $sheets = $this->parseSheetWithLangs($sheets);
+
+         foreach ($sheets as $key => $sheet) {
+             $checkTransGroup = TranslationGroup::where('key', 'Services')->first();
+
+             if (!is_null($checkTransGroup)) {
+                 $checkTrans = Translation::where('key', $sheet['trans key'])->first();
+                 if (!is_null($checkTrans)) {
+                     foreach ($this->langs as $key => $lang) {
+                         TranslationLine::where('translation_id', $checkTrans->id)
+                                         ->where('lang_id', $lang->id)
+                                         ->update([ 'line' => $sheet[$lang->id], ]);
+                     }
+                 }else{
+                     $trans = Translation::create([
+                         'group_id' => $checkTransGroup->id,
+                         'key' => $sheet['trans key'],
+                     ]);
+
+                     foreach ($this->langs as $key => $lang) {
+                         TranslationLine::create([
+                             'translation_id' => $trans->id,
+                             'lang_id' => $lang->id,
+                             'line' => $sheet[$lang->id],
+                         ]);
+                     }
+                 }
+             }
+         }
+     }
+
+
+     public function uploadServices()
+     {
+         $output = [];
+         $data = 'Services';
+         $view = view('admin::admin.google.progressBar', compact('data'));
+         echo $view->render();
+
+         $sheet = Sheets::spreadsheet('1MvijgzhraJhOSiaqmAXEOkXReZHxO2IyRfoEg19X7c4')
+                        ->sheetById(5462719)
+                        ->all();
+
+         $rows = $this->parseSheetWithLangs($sheet);
+
+         $outputs = [];
+         $i = 0;
+
+         foreach ($rows as $key => $row) {
+             if ($row['Type'] === 'Seo') {
+                 $outputs[$row['ServiceCategoryShortCode']]['seo'][$row['Tag']] = $row['TransShortCode'];
+             }else{
+                 if ($row['Tag'] === 'Anchor') {
+                     $i++;
+                 }
+                 $outputs[$row['ServiceCategoryShortCode']]['anchors'][$i][$row['Tag']] = $row['TransShortCode'];
+             }
+         }
+
+         foreach ($outputs as $shortCode => $output)
+         {
+             $findCategory = BlogCategory::where('short_code', $shortCode)->first();
+             if (!is_null($findCategory)) {
+                 // Set seo
+                 if (array_key_exists('seo', $output)) {
+                     foreach ($this->langs as $key => $lang) {
+
+                         Model::$lang = $lang->id;
+                         \App::setLocale($lang->lang);
+
+                         $findCategory->translations()->where('lang_id', $lang->id)->update([
+                            'name' =>  trans('vars.'.$output['seo']['title']), //$output['seo']['title'][$lang->id],
+                            'seo_title' => trans('vars.'.$output['seo']['seoTitle']),//$output['seo']['seoTitle'][$lang->id],
+                            'seo_description' => trans('vars.'.$output['seo']['seoDesc']),//$output['seo']['seoDesc'][$lang->id],
+                         ]);
+                     }
+                 }
+
+                 // Set anchors
+                 if (array_key_exists('anchors', $output)) {
+                     foreach ($findCategory->blogs as $key => $blogItem) {
+                         $blogItem->translations()->delete();
+                     }
+                     $findCategory->blogs()->delete();
+
+                     foreach ($output['anchors'] as $anchor) {
+
+                         $blog = new Blog();
+                         $blog->category_id = $findCategory->id;
+                         $blog->alias = uniqid();
+                         $blog->save();
+
+                         foreach ($this->langs as $lang) {
+                             $title = "";
+                             $body = "";
+                             Model::$lang = $lang->id;
+                             \App::setLocale($lang->lang);
+
+                             foreach ($anchor as $contentType => $anchorPart) {
+                                if ($contentType === 'Anchor') {
+                                    $title = trans('vars.'.$anchorPart);
+                                }elseif($contentType === 'Paragraph') {
+                                    $body .= "<p>". trans('vars.'.$anchorPart) ."</p>";
+                                }elseif($contentType === 'ListBulletsBegin') {
+                                    $body .= "<ul><li>". trans('vars.'.$anchorPart) ."</li>";
+                                }elseif($contentType === 'ListBullets') {
+                                    $body .= "<li>". trans('vars.'.$anchorPart) ."</li>";
+                                }elseif($contentType === 'ListBulletsEnd') {
+                                    $body .= "<li>". trans('vars.'.$anchorPart) ."</li></ul>";
+                                }
+                            }
+
+                            $blog->translations()->create([
+                                'lang_id' => $lang->id,
+                                'name' => $title,
+                                'body' => $body,
+                            ]);
+
+                        }
+                     }
+                 }
+             }
+         }
+
+         // dd($outputs, $rows);
+     }
+
 }
