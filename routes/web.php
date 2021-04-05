@@ -7,6 +7,22 @@ Route::get('/', function(){
     return redirect('/back');
 });
 
+Route::get('/change-slugs', function(){
+
+    $blogs = App\Models\BlogCategory::get();
+
+
+    foreach ($blogs as $key => $blog) {
+        $blog->update([
+            'alias' => str_slug($blog->translation->name)
+        ]);
+        // echo $blog->translation->name;
+    }
+    dd($blogs);
+
+});
+
+
 
 // test route
 Route::get('/paynet-test', 'Payments\Paynet@index');
