@@ -1681,14 +1681,19 @@ class GoogleController extends Controller
 
          foreach ($rows as $key => $row) {
              if ($row['Type'] === 'Seo') {
-                 $outputs[$row['ServiceCategoryShortCode']]['seo'][$row['Tag']] = $row['TransShortCode'];
+                 foreach ($this->langs as $lang) {
+                     $outputs[$row['ServiceCategoryShortCode']]['seo'][$row['Tag']][$lang->id] = $row[$lang->id];
+                 }
+                 // $outputs[$row['ServiceCategoryShortCode']]['seo'][$row['Tag']] = $row['TransShortCode'];
              }else{
                  if ($row['Tag'] === 'Anchor') {
                      $i++;
                  }
-                 $outputs[$row['ServiceCategoryShortCode']]['anchors'][$i][$row['Tag']] = $row['TransShortCode'];
+                 $outputs[$row['ServiceCategoryShortCode']]['anchors'][$i][][$row['Tag']] = $row['TransShortCode'];
              }
          }
+
+         // dd($outputs);
 
          foreach ($outputs as $shortCode => $output)
          {
@@ -1702,9 +1707,12 @@ class GoogleController extends Controller
                          \App::setLocale($lang->lang);
 
                          $findCategory->translations()->where('lang_id', $lang->id)->update([
-                            'name' =>  trans('vars.'.$output['seo']['title']), //$output['seo']['title'][$lang->id],
-                            'seo_title' => trans('vars.'.$output['seo']['seoTitle']),//$output['seo']['seoTitle'][$lang->id],
-                            'seo_description' => trans('vars.'.$output['seo']['seoDesc']),//$output['seo']['seoDesc'][$lang->id],
+                            // 'name' =>  trans('vars.'.$output['seo']['title']), //$output['seo']['title'][$lang->id],
+                            // 'seo_title' => trans('vars.'.$output['seo']['seoTitle']),//$output['seo']['seoTitle'][$lang->id],
+                            // 'seo_description' => trans('vars.'.$output['seo']['seoDesc']),//$output['seo']['seoDesc'][$lang->id],
+                            'name' => $output['seo']['title'][$lang->id],
+                            'seo_title' => $output['seo']['seoTitle'][$lang->id],
+                            'seo_description' => $output['seo']['seoDesc'][$lang->id],
                          ]);
                      }
                  }
@@ -1730,17 +1738,29 @@ class GoogleController extends Controller
                              \App::setLocale($lang->lang);
 
                              foreach ($anchor as $contentType => $anchorPart) {
-                                if ($contentType === 'Anchor') {
-                                    $title = trans('vars.'.$anchorPart);
-                                }elseif($contentType === 'Paragraph') {
-                                    $body .= "<p>". trans('vars.'.$anchorPart) ."</p>";
-                                }elseif($contentType === 'ListBulletsBegin') {
-                                    $body .= "<ul><li>". trans('vars.'.$anchorPart) ."</li>";
-                                }elseif($contentType === 'ListBullets') {
-                                    $body .= "<li>". trans('vars.'.$anchorPart) ."</li>";
-                                }elseif($contentType === 'ListBulletsEnd') {
-                                    $body .= "<li>". trans('vars.'.$anchorPart) ."</li></ul>";
-                                }
+                                 if (array_key_exists('Anchor', $anchorPart)) {
+                                     $title = trans('vars.'.$anchorPart['Anchor']);
+                                 }elseif(array_key_exists('Paragraph', $anchorPart)) {
+                                     $body .= "<p>". trans('vars.'.$anchorPart['Paragraph']) ."</p>";
+                                 }elseif(array_key_exists('ListBulletsBegin', $anchorPart)) {
+                                     $body .= "<ul><li>". trans('vars.'.$anchorPart['ListBulletsBegin']) ."</li>";
+                                 }elseif(array_key_exists('ListBullets', $anchorPart)) {
+                                     $body .= "<li>". trans('vars.'.$anchorPart['ListBullets']) ."</li>";
+                                 }elseif(array_key_exists('ListBulletsEnd', $anchorPart)) {
+                                     $body .= "<li>". trans('vars.'.$anchorPart['ListBulletsEnd']) ."</li></ul>";
+                                 }
+
+                                // if ($contentType === 'Anchor') {
+                                //     $title = trans('vars.'.$anchorPart);
+                                // }elseif($contentType === 'Paragraph') {
+                                //     $body .= "<p>". trans('vars.'.$anchorPart) ."</p>";
+                                // }elseif($contentType === 'ListBulletsBegin') {
+                                //     $body .= "<ul><li>". trans('vars.'.$anchorPart) ."</li>";
+                                // }elseif($contentType === 'ListBullets') {
+                                //     $body .= "<li>". trans('vars.'.$anchorPart) ."</li>";
+                                // }elseif($contentType === 'ListBulletsEnd') {
+                                //     $body .= "<li>". trans('vars.'.$anchorPart) ."</li></ul>";
+                                // }
                             }
 
                             $blog->translations()->create([
@@ -1754,8 +1774,6 @@ class GoogleController extends Controller
                  }
              }
          }
-
-         // dd($outputs, $rows);
      }
 
 }
