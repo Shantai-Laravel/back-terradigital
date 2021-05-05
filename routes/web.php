@@ -22,7 +22,8 @@ Route::get('/change-slugs', function(){
 
 });
 
-
+Route::get('/auth/{provider}', 'AuthController@redirectToProvider');
+Route::get('/auth/{provider}/callback', 'AuthController@handleProviderCallback');
 
 // test route
 Route::get('/paynet-test', 'Payments\Paynet@index');

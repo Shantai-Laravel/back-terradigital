@@ -12,6 +12,7 @@ class BlogCategory extends Model
                         'parent_id',
                         'alias',
                         'short_code',
+                        'price',
                         'level',
                         'position',
                         'succesion',

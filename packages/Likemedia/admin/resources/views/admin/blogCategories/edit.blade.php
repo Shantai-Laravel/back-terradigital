@@ -118,6 +118,11 @@
                     </div> <hr>
 
                     <div class="form-group">
+                        <label for="price">Price</label>
+                        <input type="number" name="price" id="price" class="form-control" value="{{ $category->price }}" required/>
+                    </div> <hr>
+
+                    <div class="form-group">
                         <label for="img">Select banner</label>
                         <input type="file" name="banner" id="banner"/><br>
                         @if ($category->banner)

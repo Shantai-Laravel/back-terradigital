@@ -140,6 +140,7 @@ class AuthController extends Controller
     */
     public function handleProviderCallback($provider)
     {
+
         $redirect = 'false';
 
         if (@$_COOKIE['redirect_status']) {
@@ -163,7 +164,7 @@ class AuthController extends Controller
                     'remember_token' => $user->token,
                 ]);
             }
-        }else{
+        }else {
             $checkUser->update([ $provider => $user->getId() ]);
             $authUser = FrontUser::where('email', $user->getEmail())->first();
         }
