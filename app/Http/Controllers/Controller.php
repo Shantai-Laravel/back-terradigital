@@ -34,7 +34,7 @@ class Controller extends BaseController
         $this->lang = Setup::$lang;
         $this->siteType = Setup::$site;
         $this->device = Setup::$device;
-        $this->warehouse = Setup::$warehouse->name;
+        $this->warehouse = 'Frisbo';
         $this->mainCurrency = Setup::$mainCurrency;
         $this->currency = Setup::$currency;
         $this->country = Setup::$country;

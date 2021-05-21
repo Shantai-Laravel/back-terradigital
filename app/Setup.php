@@ -86,8 +86,8 @@ class Setup
         Model::$site = self::$site;
         Model::$currency = self::$currency->id;
         Model::$mainCurrency = self::$mainCurrency->id;
-        Model::$warehouse = self::$warehouse->id;
-        Model::$warehouseName = self::$warehouse->name;
+        // Model::$warehouse = self::$warehouse->id;
+        // Model::$warehouseName = self::$warehouse->name;
 
         if ($this->request->method() == 'GET') {
             $this->shareCarts();
