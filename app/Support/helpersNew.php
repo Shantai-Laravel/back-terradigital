@@ -1,5 +1,25 @@
 <?php
 
+function getPromotionSection($promotionId, $number, $lang)
+{
+    $promoSection = DB::table('promos_sections')
+        ->join('promos_sections_translation', 'promos_sections_translation.promo_section_id', '=' ,'promos_sections.id')
+        ->where('lang_id', $lang)
+        ->where('number', $number)
+        ->where('promotion_id', $promotionId)
+        ->first();
+
+    if (is_null($promoSection)){
+        $promoSection =  new \stdClass();
+        $promoSection->id = $number;
+        $promoSection->title = '';
+        $promoSection->body = '';
+        $promoSection->image = null;
+    }
+
+    return $promoSection;
+}
+
 function getPage($alias, $lang)
 {
     $page = DB::table('pages')

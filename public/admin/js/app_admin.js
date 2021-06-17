@@ -97119,11 +97119,15 @@ var render = function() {
                   _c("div", { staticClass: "col-md-7" }, [
                     _c("i", { staticClass: "fa fa-ellipsis-v" }),
                     _vm._v(" "),
+                    _c("small", { staticClass: "label label-primary" }, [
+                      _vm._v(_vm._s(item.type))
+                    ]),
+                    _vm._v(" "),
                     _c("span", [_vm._v(_vm._s(item.translation.name))])
                   ]),
                   _vm._v(" "),
                   _c("div", { staticClass: "col-md-5 text-right" }, [
-                    item.level == 1
+                    item.level < 3 && item.type !== "service"
                       ? _c("span", [
                           !item.blogs.length && item.level < _vm.maxDepth
                             ? _c(
@@ -97877,7 +97881,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         return {
             titles: [],
             addedCategory: [],
-            type: 'accordion'
+            type: 'category'
         };
     },
     mounted: function mounted() {

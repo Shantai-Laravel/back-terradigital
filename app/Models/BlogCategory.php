@@ -56,7 +56,28 @@ class BlogCategory extends Model
 
     public function children()
     {
-        return $this->hasMany(BlogCategory::class, 'parent_id')->orderBy('position', 'asc') ->orderBy('created_at', 'desc');
+        return $this
+            ->hasMany(BlogCategory::class, 'parent_id')
+            ->orderBy('position', 'asc')
+            ->orderBy('created_at', 'desc');
+    }
+
+    public function subcategories()
+    {
+        return $this
+            ->hasMany(BlogCategory::class, 'parent_id')
+            ->where('type', '!=', 'service')
+            ->orderBy('position', 'asc')
+            ->orderBy('created_at', 'desc');
+    }
+
+    public function services()
+    {
+        return $this
+            ->hasMany(BlogCategory::class, 'parent_id')
+            ->where('type', '=', 'service')
+            ->orderBy('position', 'asc')
+            ->orderBy('created_at', 'desc');
     }
 
 }

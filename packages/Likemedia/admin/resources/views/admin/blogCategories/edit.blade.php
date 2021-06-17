@@ -109,8 +109,15 @@
                         @endif
                     </div>
                 </div>
+                
                 <div class="col-md-3">
-                    <h5>Image:</h5><hr>
+                    <div class="form-group">
+                        <label for="short_code">Type</label>
+                        <select class="form-control" name="type">
+                            <option value="category" {{ $category->type === 'category' ? 'selected' : '' }}>Category</option>
+                            <option value="service" {{ $category->type === 'service' ? 'selected' : '' }}>Service</option>
+                        </select>
+                    </div> <hr>
 
                     <div class="form-group">
                         <label for="short_code">Short Code</label>

@@ -51,4 +51,9 @@ class Promotion extends Model
     {
         return $this->hasMany(PromotionSet::class, 'promotion_id', 'id');
     }
+
+    public function promoSections()
+    {
+        return $this->hasMany(PromoSection::class, 'promotion_id', 'id');
+    }
 }

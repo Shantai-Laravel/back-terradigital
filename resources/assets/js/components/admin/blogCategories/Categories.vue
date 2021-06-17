@@ -9,7 +9,7 @@
                 <div class="row">
                     <div class="col-md-7">
                         <i class="fa fa-ellipsis-v"></i>
-                        <!-- <small class="label label-primary">{{ item.type }}</small> -->
+                        <small class="label label-primary">{{ item.type }}</small>
                         <span>{{ item.translation.name }}</span>
                     </div>
                     <div class="col-md-5 text-right">
@@ -17,7 +17,7 @@
                             <input class="checkbox" type="checkbox" v-model="menu=item.active" @change="setMenuStatus(item)">
                             <span>Menu</span>
                         </label> -->
-                        <span v-if="item.level == 1">
+                        <span v-if="item.level < 3 && item.type !== 'service'">
                             <!-- <a :href="'/back/blogs/category/' + item.id" v-if="item.blogs.length || !item.children.length"><i class="fa fa-eye"></i></a> -->
                             <a href="#" data-toggle="modal" @click="setCurrentCategory(item)" data-target="#addNew" v-if="!item.blogs.length && item.level < maxDepth"><i class="fa fa-plus"></i></a>
                             <a href="#" v-else><i class="fa fa-minus"></i></a>

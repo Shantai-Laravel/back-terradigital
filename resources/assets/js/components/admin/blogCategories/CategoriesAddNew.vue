@@ -68,7 +68,7 @@ export default {
         return {
             titles: [],
             addedCategory: [],
-            type: 'accordion',
+            type: 'category',
         }
     },
     mounted(){
