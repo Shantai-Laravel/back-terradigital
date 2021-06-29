@@ -39,6 +39,7 @@ class ServiceController extends ApiController
         $data['servicesAll'] = BlogCategory::with(
                             [
                                 'children.translation',
+                                'children.blogs.translation:blog_id,id,body,name',
                                 'translation',
                                 'blogs.translation:blog_id,id,body,name'
                             ])
