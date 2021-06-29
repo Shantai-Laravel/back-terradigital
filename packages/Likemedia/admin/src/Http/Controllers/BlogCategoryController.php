@@ -235,6 +235,7 @@ class BlogCategoryController extends Controller
         $blogCategory->banner = $banner;
         $blogCategory->short_code = $request->get('short_code');
         $blogCategory->price = $request->get('price');
+        $blogCategory->price_bottom = $request->get('price_bottom');
         $blogCategory->type = $request->get('type');
         $blogCategory->save();
 

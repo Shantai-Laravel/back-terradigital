@@ -1698,7 +1698,7 @@ class GoogleController extends Controller
 
          // $outputs = array_reverse($outputs)
 
-         foreach (array_reverse($outputs) as $shortCode => $output)
+         foreach ($outputs as $shortCode => $output)
          {
              $findCategory = BlogCategory::where('short_code', $shortCode)->first();
              if (!is_null($findCategory)) {
@@ -1714,8 +1714,8 @@ class GoogleController extends Controller
                             // 'seo_title' => trans('vars.'.$output['seo']['seoTitle']),//$output['seo']['seoTitle'][$lang->id],
                             // 'seo_description' => trans('vars.'.$output['seo']['seoDesc']),//$output['seo']['seoDesc'][$lang->id],
                             'name' => $output['seo']['Title'][$lang->id],
-                            'seo_title' => $output['seo']['seoTitle'][$lang->id],
-                            'seo_description' => $output['seo']['seoDesc'][$lang->id],
+                            'seo_title' => @$output['seo']['seoTitle'][$lang->id],
+                            'seo_description' => @$output['seo']['seoDesc'][$lang->id],
                          ]);
                      }
                  }
@@ -1757,12 +1757,15 @@ class GoogleController extends Controller
                                      $body .= "<li class='v-list-item theme--light'>". trans('vars.'.$anchorPart['ListBullets']) ."</li>";
                                  }elseif(array_key_exists('ListBulletsEnd', $anchorPart)) {
                                      $body .= "<li class='v-list-item theme--light'>". trans('vars.'.$anchorPart['ListBulletsEnd']) ."</li></ul>";
+
+                                 }elseif(array_key_exists('ListBulletsBeginGrey', $anchorPart)) {
+                                     $body .= "<ul><li class='v-list-item theme--light grey-item'>". trans('vars.'.$anchorPart['ListBulletsBeginGrey']) ."</li>";
+                                 }elseif(array_key_exists('ListBulletsGrey', $anchorPart)) {
+                                     $body .= "<li class='v-list-item theme--light grey-item'>". trans('vars.'.$anchorPart['ListBulletsGrey']) ."</li>";
+                                 }elseif(array_key_exists('ListBulletsEndGrey', $anchorPart)) {
+                                     $body .= "<li class='v-list-item theme--light grey-item'>". trans('vars.'.$anchorPart['ListBulletsEndGrey']) ."</li></ul>";
                                  }elseif(array_key_exists('SectionName', $anchorPart)) {
                                      $body .= "<h3 class='v-subheader'>". trans('vars.'.$anchorPart['SectionName']) ."</h3>";
-                                 }elseif(array_key_exists('PriceTop', $anchorPart)) {
-                                      $findCategory->update(['price' => $anchorPart['PriceTop']]);
-                                 }elseif(array_key_exists('PriceBottom', $anchorPart)) {
-                                      $findCategory->update(['price_bottom' => $anchorPart['PriceBottom']]);
                                  }
 
                                 // if ($contentType === 'Anchor') {

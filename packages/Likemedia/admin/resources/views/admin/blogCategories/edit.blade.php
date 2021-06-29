@@ -109,7 +109,7 @@
                         @endif
                     </div>
                 </div>
-                
+
                 <div class="col-md-3">
                     <div class="form-group">
                         <label for="short_code">Type</label>
@@ -125,8 +125,13 @@
                     </div> <hr>
 
                     <div class="form-group">
-                        <label for="price">Price</label>
+                        <label for="price">Price Top</label>
                         <input type="number" name="price" id="price" class="form-control" value="{{ $category->price }}" required/>
+                    </div> <hr>
+
+                    <div class="form-group">
+                        <label for="price_bottom">Price Bottom</label>
+                        <input type="number" name="price_bottom" id="price_bottom" class="form-control" value="{{ $category->price_bottom }}" required/>
                     </div> <hr>
 
                     <div class="form-group">
