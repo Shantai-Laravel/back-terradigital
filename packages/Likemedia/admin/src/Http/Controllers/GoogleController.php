@@ -1627,8 +1627,8 @@ class GoogleController extends Controller
          $view = view('admin::admin.google.progressBar', compact('data'));
          echo $view->render();
 
-         $sheets =  Sheets::spreadsheet('1MvijgzhraJhOSiaqmAXEOkXReZHxO2IyRfoEg19X7c4')
-                        ->sheetById(5462719)
+         $sheets =  Sheets::spreadsheet('1nV7hcDrRylO8hGFywrFH4rSpngAQc7eSyxWT0WnncHI')
+                        ->sheetById(1355186422)
                         ->all();
 
          $sheets = $this->parseSheetWithLangs($sheets);
@@ -1670,8 +1670,8 @@ class GoogleController extends Controller
          $view = view('admin::admin.google.progressBar', compact('data'));
          echo $view->render();
 
-         $sheet = Sheets::spreadsheet('1MvijgzhraJhOSiaqmAXEOkXReZHxO2IyRfoEg19X7c4')
-                        ->sheetById(5462719)
+         $sheet = Sheets::spreadsheet('1nV7hcDrRylO8hGFywrFH4rSpngAQc7eSyxWT0WnncHI')
+                        ->sheetById(1355186422)
                         ->all();
 
          $rows = $this->parseSheetWithLangs($sheet);
@@ -1679,12 +1679,13 @@ class GoogleController extends Controller
          $outputs = [];
          $i = 0;
 
+         // dd($rows);
+
          foreach ($rows as $key => $row) {
              if ($row['Type'] === 'Seo') {
                  foreach ($this->langs as $lang) {
                      $outputs[$row['ServiceCategoryShortCode']]['seo'][$row['Tag']][$lang->id] = $row[$lang->id];
                  }
-                 // $outputs[$row['ServiceCategoryShortCode']]['seo'][$row['Tag']] = $row['TransShortCode'];
              }else{
                  if ($row['Tag'] === 'Anchor') {
                      $i++;
@@ -1693,9 +1694,11 @@ class GoogleController extends Controller
              }
          }
 
-         // dd($outputs);
+         // dd(array_reverse($outputs));
 
-         foreach ($outputs as $shortCode => $output)
+         // $outputs = array_reverse($outputs)
+
+         foreach (array_reverse($outputs) as $shortCode => $output)
          {
              $findCategory = BlogCategory::where('short_code', $shortCode)->first();
              if (!is_null($findCategory)) {
@@ -1710,22 +1713,28 @@ class GoogleController extends Controller
                             // 'name' =>  trans('vars.'.$output['seo']['title']), //$output['seo']['title'][$lang->id],
                             // 'seo_title' => trans('vars.'.$output['seo']['seoTitle']),//$output['seo']['seoTitle'][$lang->id],
                             // 'seo_description' => trans('vars.'.$output['seo']['seoDesc']),//$output['seo']['seoDesc'][$lang->id],
-                            'name' => $output['seo']['title'][$lang->id],
+                            'name' => $output['seo']['Title'][$lang->id],
                             'seo_title' => $output['seo']['seoTitle'][$lang->id],
                             'seo_description' => $output['seo']['seoDesc'][$lang->id],
                          ]);
                      }
                  }
 
+                 // dd($output);
+
                  // Set anchors
                  if (array_key_exists('anchors', $output)) {
+
+
                      foreach ($findCategory->blogs as $key => $blogItem) {
                          $blogItem->translations()->delete();
                      }
+
                      $findCategory->blogs()->delete();
 
-                     foreach ($output['anchors'] as $anchor) {
+                     // dd($output);
 
+                     foreach ($output['anchors'] as $anchor) {
                          $blog = new Blog();
                          $blog->category_id = $findCategory->id;
                          $blog->alias = uniqid();
@@ -1743,11 +1752,17 @@ class GoogleController extends Controller
                                  }elseif(array_key_exists('Paragraph', $anchorPart)) {
                                      $body .= "<p>". trans('vars.'.$anchorPart['Paragraph']) ."</p>";
                                  }elseif(array_key_exists('ListBulletsBegin', $anchorPart)) {
-                                     $body .= "<ul><li>". trans('vars.'.$anchorPart['ListBulletsBegin']) ."</li>";
+                                     $body .= "<ul><li class='v-list-item theme--light'>". trans('vars.'.$anchorPart['ListBulletsBegin']) ."</li>";
                                  }elseif(array_key_exists('ListBullets', $anchorPart)) {
-                                     $body .= "<li>". trans('vars.'.$anchorPart['ListBullets']) ."</li>";
+                                     $body .= "<li class='v-list-item theme--light'>". trans('vars.'.$anchorPart['ListBullets']) ."</li>";
                                  }elseif(array_key_exists('ListBulletsEnd', $anchorPart)) {
-                                     $body .= "<li>". trans('vars.'.$anchorPart['ListBulletsEnd']) ."</li></ul>";
+                                     $body .= "<li class='v-list-item theme--light'>". trans('vars.'.$anchorPart['ListBulletsEnd']) ."</li></ul>";
+                                 }elseif(array_key_exists('SectionName', $anchorPart)) {
+                                     $body .= "<h3 class='v-subheader'>". trans('vars.'.$anchorPart['SectionName']) ."</h3>";
+                                 }elseif(array_key_exists('PriceTop', $anchorPart)) {
+                                      $findCategory->update(['price' => $anchorPart['PriceTop']]);
+                                 }elseif(array_key_exists('PriceBottom', $anchorPart)) {
+                                      $findCategory->update(['price_bottom' => $anchorPart['PriceBottom']]);
                                  }
 
                                 // if ($contentType === 'Anchor') {
