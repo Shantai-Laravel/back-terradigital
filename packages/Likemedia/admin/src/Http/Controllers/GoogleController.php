@@ -1752,20 +1752,20 @@ class GoogleController extends Controller
                                  }elseif(array_key_exists('Paragraph', $anchorPart)) {
                                      $body .= "<p>". trans('vars.'.$anchorPart['Paragraph']) ."</p>";
                                  }elseif(array_key_exists('ListBulletsBegin', $anchorPart)) {
-                                     $body .= "<ul><li class='v-list-item theme--light'><v-icon class='mr-2' color='yellow darken-3'>mdi-check</v-icon>".
+                                     $body .= "<ul><li class='v-list-item theme--light'>".
                                      trans('vars.'.$anchorPart['ListBulletsBegin'])
                                      ."</li>";
                                  }elseif(array_key_exists('ListBullets', $anchorPart)) {
-                                     $body .= "<li class='v-list-item theme--light'><v-icon class='mr-2' color='yellow darken-3'>mdi-check</v-icon>". trans('vars.'.$anchorPart['ListBullets']) ."</li>";
+                                     $body .= "<li class='v-list-item theme--light'>". trans('vars.'.$anchorPart['ListBullets']) ."</li>";
                                  }elseif(array_key_exists('ListBulletsEnd', $anchorPart)) {
-                                     $body .= "<li class='v-list-item theme--light'><v-icon class='mr-2' color='yellow darken-3'>mdi-check</v-icon>". trans('vars.'.$anchorPart['ListBulletsEnd']) ."</li></ul>";
+                                     $body .= "<li class='v-list-item theme--light'>". trans('vars.'.$anchorPart['ListBulletsEnd']) ."</li></ul>";
 
                                  }elseif(array_key_exists('ListBulletsBeginGrey', $anchorPart)) {
-                                     $body .= "<ul><li class='v-list-item theme--light grey-item'><v-icon class='mr-2'>mdi-close</v-icon>". trans('vars.'.$anchorPart['ListBulletsBeginGrey']) ."</li>";
+                                     $body .= "<ul><li class='v-list-item theme--light grey-item'>". trans('vars.'.$anchorPart['ListBulletsBeginGrey']) ."</li>";
                                  }elseif(array_key_exists('ListBulletsGrey', $anchorPart)) {
-                                     $body .= "<li class='v-list-item theme--light grey-item'><v-icon class='mr-2'>mdi-close</v-icon>". trans('vars.'.$anchorPart['ListBulletsGrey']) ."</li>";
+                                     $body .= "<li class='v-list-item theme--light grey-item'>". trans('vars.'.$anchorPart['ListBulletsGrey']) ."</li>";
                                  }elseif(array_key_exists('ListBulletsEndGrey', $anchorPart)) {
-                                     $body .= "<li class='v-list-item theme--light grey-item'><v-icon class='mr-2'>mdi-close</v-icon>". trans('vars.'.$anchorPart['ListBulletsEndGrey']) ."</li></ul>";
+                                     $body .= "<li class='v-list-item theme--light grey-item'>". trans('vars.'.$anchorPart['ListBulletsEndGrey']) ."</li></ul>";
                                  }elseif(array_key_exists('SectionName', $anchorPart)) {
                                      $body .= "<h3 class='v-subheader'>". trans('vars.'.$anchorPart['SectionName']) ."</h3>";
                                  }
