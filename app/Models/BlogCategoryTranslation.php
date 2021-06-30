@@ -20,6 +20,10 @@ class BlogCategoryTranslation extends Model
                         'seo_description',
                         'seo_keywords',
                         'link',
+                        'price_top_begin',
+                        'price_top_end',
+                        'price_bottom_begin',
+                        'price_bottom_end',
                     ];
 
     public function category()

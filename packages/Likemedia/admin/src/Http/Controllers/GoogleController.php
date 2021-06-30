@@ -1770,6 +1770,24 @@ class GoogleController extends Controller
                                      $body .= "<h3 class='v-subheader'>". trans('vars.'.$anchorPart['SectionName']) ."</h3>";
                                  }
 
+                                 elseif(array_key_exists('PriceTopBegin', $anchorPart)) {
+                                     $findCategory->translations()->where('lang_id', $lang->id)->update([
+                                         'price_top_begin' => trans('vars.'.$anchorPart['PriceTopBegin'])
+                                     ]);
+                                 }elseif(array_key_exists('PriceTopEnd', $anchorPart)) {
+                                     $findCategory->translations()->where('lang_id', $lang->id)->update([
+                                         'price_top_end' => trans('vars.'.$anchorPart['PriceTopEnd'])
+                                     ]);
+                                 }elseif(array_key_exists('PriceBottomBegin', $anchorPart)) {
+                                     $findCategory->translations()->where('lang_id', $lang->id)->update([
+                                         'price_bottom_begin' => trans('vars.'.$anchorPart['PriceBottomBegin'])
+                                     ]);
+                                 }elseif(array_key_exists('PriceBottomEnd', $anchorPart)) {
+                                     $findCategory->translations()->where('lang_id', $lang->id)->update([
+                                         'price_bottom_end' => trans('vars.'.$anchorPart['PriceBottomEnd'])
+                                     ]);
+                                 }
+
                                 // if ($contentType === 'Anchor') {
                                 //     $title = trans('vars.'.$anchorPart);
                                 // }elseif($contentType === 'Paragraph') {
