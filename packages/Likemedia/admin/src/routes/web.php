@@ -5,6 +5,13 @@ Route::group(['middleware' => ['web']], function ()
 
     Route::group(['namespace' => $namespace, 'prefix' => 'back', 'middleware' => 'auth'], function ()
     {
+        Route::get('/services', 'ReturnsController@index');
+        Route::post('/services', 'ReturnsController@store');
+        Route::post('/service/{id}', 'ReturnsController@update');
+        Route::get('/service/delete/{id}', 'ReturnsController@delete');
+        Route::get('/service/edit/{id}', 'ReturnsController@edit');
+
+
         // Dashboard
         Route::get('/', 'AdminController@index')->name('back');
         Route::get('/get-translations', 'AdminController@getTranslations')->name('getTranslations');

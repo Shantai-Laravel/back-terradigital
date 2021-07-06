@@ -13,6 +13,8 @@
     <h3 class="title"> Services </h3>
 </div>
 
+<a href="{{ url('/back/services') }}" class="btn btn-primary">Extended Services</a>
+
 <div id="cover">
 
     <blog-categories-add-new :langs="{{ $langs }}"></blog-categories-add-new>

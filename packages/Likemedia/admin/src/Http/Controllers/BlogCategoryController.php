@@ -236,6 +236,9 @@ class BlogCategoryController extends Controller
         $blogCategory->short_code = $request->get('short_code');
         $blogCategory->price = $request->get('price');
         $blogCategory->price_bottom = $request->get('price_bottom');
+        $blogCategory->package_price_1 = $request->get('package_price_1');
+        $blogCategory->package_price_2 = $request->get('package_price_2');
+        $blogCategory->package_price_3 = $request->get('package_price_3');
         $blogCategory->type = $request->get('type');
         $blogCategory->save();
 
@@ -247,6 +250,9 @@ class BlogCategoryController extends Controller
                 'seo_title' => request('seo_title_' . $lang->lang),
                 'seo_description' => request('seo_description_' . $lang->lang),
                 'seo_keywords' => request('seo_keywords_' . $lang->lang),
+                'package_1' => request('package_1_' . $lang->lang),
+                'package_2' => request('package_2_' . $lang->lang),
+                'package_3' => request('package_3_' . $lang->lang),
             ]);
         endforeach;
 

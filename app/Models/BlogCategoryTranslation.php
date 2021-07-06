@@ -24,6 +24,9 @@ class BlogCategoryTranslation extends Model
                         'price_top_end',
                         'price_bottom_begin',
                         'price_bottom_end',
+                        'package_1',
+                        'package_2',
+                        'package_3',
                     ];
 
     public function category()

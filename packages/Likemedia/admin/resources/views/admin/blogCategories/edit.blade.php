@@ -69,6 +69,36 @@
                                 </div>
                                 <div class="row">
                                     <div class="col-md-4">
+                                        <label>Package Text 1[{{ $lang->lang }}]</label>
+                                        <input type="text" name="package_1_{{ $lang->lang }}" class="form-control"
+                                        @foreach($category->translations as $translation)
+                                        @if ($translation->lang_id == $lang->id)
+                                        value="{{ $translation->package_1 }}"
+                                        @endif
+                                        @endforeach
+                                        >
+                                    </div>
+                                    <div class="col-md-4">
+                                        <label>Package Text 1[{{ $lang->lang }}]</label>
+                                        <input type="text" name="package_2_{{ $lang->lang }}" class="form-control"
+                                        @foreach($category->translations as $translation)
+                                        @if ($translation->lang_id == $lang->id)
+                                        value="{{ $translation->package_2 }}"
+                                        @endif
+                                        @endforeach
+                                        >
+                                    </div>
+                                    <div class="col-md-4">
+                                        <label>Package Text 1[{{ $lang->lang }}]</label>
+                                        <input type="text" name="package_3_{{ $lang->lang }}" class="form-control"
+                                        @foreach($category->translations as $translation)
+                                        @if ($translation->lang_id == $lang->id)
+                                        value="{{ $translation->package_3 }}"
+                                        @endif
+                                        @endforeach
+                                        >
+                                    </div>
+                                    <div class="col-md-4">
                                         <label>Seo Title[{{ $lang->lang }}]</label>
                                         <input type="text" name="seo_title_{{ $lang->lang }}" class="form-control"
                                         @foreach($category->translations as $translation)
@@ -132,6 +162,21 @@
                     <div class="form-group">
                         <label for="price_bottom">Price Bottom</label>
                         <input type="number" name="price_bottom" id="price_bottom" class="form-control" value="{{ $category->price_bottom }}" required/>
+                    </div> <hr>
+
+                    <div class="form-group">
+                        <label>Price Package 1</label>
+                        <input type="number" name="package_price_1" class="form-control" value="{{ $category->package_price_1 }}" required/>
+                    </div> <hr>
+
+                    <div class="form-group">
+                        <label>Price Package 2</label>
+                        <input type="number" name="package_price_2" class="form-control" value="{{ $category->package_price_2 }}" required/>
+                    </div> <hr>
+
+                    <div class="form-group">
+                        <label>Price Package 3</label>
+                        <input type="number" name="package_price_3" class="form-control" value="{{ $category->package_price_3 }}" required/>
                     </div> <hr>
 
                     <div class="form-group">
