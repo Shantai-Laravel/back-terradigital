@@ -121,6 +121,20 @@
     <hr>
     <div class="row">
         <div class="col-md-12">
+            <h6>Extended Services:</h6>
+        </div>
+        <div class="col-md-2">
+            <label for="">Step 1</label>
+            <a href="{{ url('/back/google-api/upload-translations-extended-services') }}" class="btn btn-primary btn-block">Services Translations</a>
+        </div>
+        <div class="col-md-2">
+            <label for="">Step 2</label>
+            <a href="{{ url('/back/google-api/upload-extended-services') }}" class="btn btn-primary btn-block">Upload Services</a>
+        </div>
+    </div>
+    <hr>
+    <div class="row">
+        <div class="col-md-12">
             <h6>Upload Collections:</h6>
         </div>
         <div class="col-md-2">

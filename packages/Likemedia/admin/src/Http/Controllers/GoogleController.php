@@ -35,6 +35,8 @@ use App\Models\PromotionProduct;
 use App\Models\PromotionSet;
 use App\Models\BlogCategory;
 use App\Models\Blog;
+use App\Models\Service;
+use App\Models\ServiceTranslation;
 use GuzzleHttp\Client;
 use Revolution\Google\Sheets\Facades\Sheets;
 use Edujugon\GoogleAds\GoogleAds;
@@ -1662,6 +1664,47 @@ class GoogleController extends Controller
          }
      }
 
+     public function uploadExtendedServicesTranslations()
+     {
+         $data = 'Services Extended Translations';
+         $view = view('admin::admin.google.progressBar', compact('data'));
+         echo $view->render();
+
+         $sheets =  Sheets::spreadsheet('1nV7hcDrRylO8hGFywrFH4rSpngAQc7eSyxWT0WnncHI')
+                        ->sheetById(284807038)
+                        ->all();
+
+         $sheets = $this->parseSheetWithLangs($sheets);
+
+         foreach ($sheets as $key => $sheet) {
+             $checkTransGroup = TranslationGroup::where('key', 'Services')->first();
+
+             if (!is_null($checkTransGroup)) {
+                 $checkTrans = Translation::where('key', $sheet['trans key'])->first();
+                 if (!is_null($checkTrans)) {
+                     foreach ($this->langs as $key => $lang) {
+                         TranslationLine::where('translation_id', $checkTrans->id)
+                                         ->where('lang_id', $lang->id)
+                                         ->update([ 'line' => $sheet[$lang->id], ]);
+                     }
+                 }else{
+                     $trans = Translation::create([
+                         'group_id' => $checkTransGroup->id,
+                         'key' => $sheet['trans key'],
+                     ]);
+
+                     foreach ($this->langs as $key => $lang) {
+                         TranslationLine::create([
+                             'translation_id' => $trans->id,
+                             'lang_id' => $lang->id,
+                             'line' => $sheet[$lang->id],
+                         ]);
+                     }
+                 }
+             }
+         }
+     }
+
 
      public function uploadServices()
      {
@@ -1678,9 +1721,6 @@ class GoogleController extends Controller
 
          $outputs = [];
          $i = 0;
-
-         // dd($rows);
-
          foreach ($rows as $key => $row) {
              if ($row['Type'] === 'Seo') {
                  foreach ($this->langs as $lang) {
@@ -1693,11 +1733,6 @@ class GoogleController extends Controller
                  $outputs[$row['ServiceCategoryShortCode']]['anchors'][$i][][$row['Tag']] = $row['TransShortCode'];
              }
          }
-
-         // dd(array_reverse($outputs));
-
-         // $outputs = array_reverse($outputs)
-
          foreach ($outputs as $shortCode => $output)
          {
              $findCategory = BlogCategory::where('short_code', $shortCode)->first();
@@ -1720,7 +1755,6 @@ class GoogleController extends Controller
                      }
                  }
 
-                 // dd($output);
 
                  // Set anchors
                  if (array_key_exists('anchors', $output)) {
@@ -1731,9 +1765,6 @@ class GoogleController extends Controller
                      }
 
                      $findCategory->blogs()->delete();
-
-                     // dd($output);
-
                      foreach ($output['anchors'] as $anchor) {
                          $blog = new Blog();
                          $blog->category_id = $findCategory->id;
@@ -1787,18 +1818,6 @@ class GoogleController extends Controller
                                          'price_bottom_end' => trans('vars.'.$anchorPart['PriceBottomEnd'])
                                      ]);
                                  }
-
-                                // if ($contentType === 'Anchor') {
-                                //     $title = trans('vars.'.$anchorPart);
-                                // }elseif($contentType === 'Paragraph') {
-                                //     $body .= "<p>". trans('vars.'.$anchorPart) ."</p>";
-                                // }elseif($contentType === 'ListBulletsBegin') {
-                                //     $body .= "<ul><li>". trans('vars.'.$anchorPart) ."</li>";
-                                // }elseif($contentType === 'ListBullets') {
-                                //     $body .= "<li>". trans('vars.'.$anchorPart) ."</li>";
-                                // }elseif($contentType === 'ListBulletsEnd') {
-                                //     $body .= "<li>". trans('vars.'.$anchorPart) ."</li></ul>";
-                                // }
                             }
 
                             $blog->translations()->create([
@@ -1809,6 +1828,47 @@ class GoogleController extends Controller
 
                         }
                      }
+                 }
+             }
+         }
+     }
+
+     public function uploadExtendedServices()
+     {
+         $output = [];
+         $data = 'Services';
+         $view = view('admin::admin.google.progressBar', compact('data'));
+         echo $view->render();
+
+         $sheet = Sheets::spreadsheet('1nV7hcDrRylO8hGFywrFH4rSpngAQc7eSyxWT0WnncHI')
+                        ->sheetById(284807038)
+                        ->all();
+
+         $rows = $this->parseSheetWithLangs($sheet);
+
+         $allServices = Service::where('parent_id', '!=', '0')->pluck('id')->toArray();
+         ServiceTranslation::whereIn('service_id', $allServices)->delete();
+         Service::whereIn('id', $allServices)->delete();
+
+         foreach ($rows as $key => $row) {
+             $service = Service::with(['children'])->where('key', $row['Key'])->first();
+
+             if ($service) {
+                 $childService = Service::create([
+                     'parent_id' => $service->id,
+                 ]);
+
+                 foreach ($this->langs as $key => $lang) {
+                     Model::$lang = $lang->id;
+                     \App::setLocale($lang->lang);
+
+                     $childService->translations()->create([
+                         'lang_id' => $lang->id,
+                         'title' => trans('vars.'.$row['TransShortCode']),
+                         'package_1' => $row['Plan1'],
+                         'package_2' => $row['Plan2'],
+                         'package_3' => $row['Plan3'],
+                     ]);
                  }
              }
          }

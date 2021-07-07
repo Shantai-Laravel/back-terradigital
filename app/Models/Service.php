@@ -19,10 +19,15 @@ class Service extends Model
         return $this->hasOne(ServiceTranslation::class , 'service_id')->where('lang_id', self::$lang);
     }
 
+    public function service()
+    {
+        return $this->hasOne(BlogCategory::class, 'id', 'service_id');
+    }
+
     public function children()
     {
         return $this
-            ->hasMany(ServiceTranslation::class, 'parent_id')
+            ->hasMany(Service::class, 'parent_id')
             ->orderBy('created_at', 'desc');
     }
 }

@@ -26,6 +26,8 @@
                             <th>#</th>
                             <th>Title</th>
                             <th>Key</th>
+                            <th>Service Category</th>
+                            <th>Features</th>
                             <th>Edit</th>
                             <th>Delete</th>
                         </tr>
@@ -36,6 +38,8 @@
                                 <th>#</th>
                                 <th>{{ $accordion->translation->title }}</th>
                                 <th><small><i>{{ $accordion->key }}</i></small> </th>
+                                <th><small>{{ $accordion->service->translation->name }}</small> </th>
+                                <th><small><i>{{ $accordion->children->count() }}</i></small> </th>
                                 <th>
                                     <a href="{{ url('/back/service/edit/' . $accordion->id) }}">
                                         <i class="fa fa-edit"></i>

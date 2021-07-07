@@ -77,11 +77,16 @@ class BlogCategory extends Model
 
     public function services()
     {
-        return $this
-            ->hasMany(BlogCategory::class, 'parent_id')
-            ->where('type', '=', 'service')
-            ->orderBy('position', 'asc')
-            ->orderBy('created_at', 'desc');
+        return $this->hasMany(Service::class, 'service_id', 'id');
     }
+
+    // public function services()
+    // {
+    //     return $this
+    //         ->hasMany(BlogCategory::class, 'parent_id')
+    //         ->where('type', '=', 'service')
+    //         ->orderBy('position', 'asc')
+    //         ->orderBy('created_at', 'desc');
+    // }
 
 }

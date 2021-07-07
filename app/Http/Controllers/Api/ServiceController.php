@@ -26,12 +26,14 @@ class ServiceController extends ApiController
             return $this->respondError("Language is not found", 500);
         }
 
-        $data['services'] = BlogCategory::with([
-            'children.translation',
-            'subcategories.translation',
-            'services.translation',
-            'translation'
-        ])
+        $data['services'] = BlogCategory::with(
+                        [
+                            'children.translation',
+                            'subcategories.translation',
+                            'services.translation',
+                            'services.children.translation',
+                            'translation'
+                        ])
                             ->where('parent_id', 0)
                             ->orderby('position', 'asc')
                             ->get();
@@ -41,7 +43,9 @@ class ServiceController extends ApiController
                                 'children.translation',
                                 'children.blogs.translation:blog_id,id,body,name',
                                 'translation',
-                                'blogs.translation:blog_id,id,body,name'
+                                'blogs.translation:blog_id,id,body,name',
+                                'services.translation',
+                                'services.children.translation',
                             ])
                                 ->orderby('position', 'asc')
                                 ->get();
@@ -54,8 +58,7 @@ class ServiceController extends ApiController
                                 ->orderBy('position', 'asc')
                                 ->get();
 
-        $data['pages'] = StaticPage::with(['translation'])
-                                ->get();
+        $data['pages'] = StaticPage::with(['translation'])->get();
 
 
         return $this->respond($data);

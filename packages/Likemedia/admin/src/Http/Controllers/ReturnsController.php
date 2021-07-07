@@ -13,7 +13,7 @@ class ReturnsController extends Controller
     public function index()
     {
         $services = BlogCategory::where('parent_id', 0)->orderBy('position', 'asc')->get();
-        $accordions = Service::where('parent_id', 0)->orderBy('created_at', 'asc')->get();
+        $accordions = Service::where('parent_id', 0)->orderBy('service_id', 'desc')->orderBy('created_at', 'asc')->get();
 
         return view('admin::admin.services.index', compact('services', 'accordions'));
     }

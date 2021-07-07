@@ -50,6 +50,9 @@ Route::group(['middleware' => ['web']], function ()
         Route::get('/google-api/upload-translations', 'GoogleController@uploadTranslations');
         Route::get('/google-api/upload-translations-services', 'GoogleController@uploadServicesTranslations');
         Route::get('/google-api/upload-services', 'GoogleController@uploadServices');
+        Route::get('/google-api/upload-translations-extended-services', 'GoogleController@uploadExtendedServicesTranslations');
+        Route::get('/google-api/upload-extended-services', 'GoogleController@uploadExtendedServices');
+
         Route::get('/google-api/upload-collections', 'GoogleController@uploadCollections');
         Route::get('/google-api/upload-sets', 'GoogleController@uploadSets');
         Route::get('/google-api/add-products-to-sets', 'GoogleController@addProductsToSets');
