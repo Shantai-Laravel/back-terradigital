@@ -1888,11 +1888,14 @@ class GoogleController extends Controller
          $rows = $this->parseSheetWithLangs($sheet);
 
          foreach ($rows as $key => $row) {
-             $service = BlogCategory::where('short_code', $row['ServiceCategoryShortCode'])->update([
-                 'stripe_product' => $row['Stripe Prod_ID'],
-                 'stripe_price' => $row['Stripe Price_ID'],
-                 'price' => $row['Price RON'],
-             ]);
+
+             if ($row['ServiceCategoryShortCode']) {
+                 $service = BlogCategory::where('short_code', $row['ServiceCategoryShortCode'])->update([
+                     'stripe_product' => $row['Stripe_Prod_ID'],
+                     'stripe_price' => $row['Stripe_Price_ID'],
+                     'price' => $row['Price_RON'],
+                 ]);
+             }
          }
      }
 
