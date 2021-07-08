@@ -1874,4 +1874,26 @@ class GoogleController extends Controller
          }
      }
 
+     public function uploadServicePrices()
+     {
+         $output = [];
+         $data = 'Services Prices';
+         $view = view('admin::admin.google.progressBar', compact('data'));
+         echo $view->render();
+
+         $sheet = Sheets::spreadsheet('1nV7hcDrRylO8hGFywrFH4rSpngAQc7eSyxWT0WnncHI')
+                        ->sheetById(1382075987)
+                        ->all();
+
+         $rows = $this->parseSheetWithLangs($sheet);
+
+         foreach ($rows as $key => $row) {
+             $service = BlogCategory::where('short_code', $row['ServiceCategoryShortCode'])->update([
+                 'stripe_product' => $row['Stripe Prod_ID'],
+                 'stripe_price' => $row['Stripe Price_ID'],
+                 'price' => $row['Price RON'],
+             ]);
+         }
+     }
+
 }

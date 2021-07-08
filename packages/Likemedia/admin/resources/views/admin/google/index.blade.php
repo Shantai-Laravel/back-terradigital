@@ -117,6 +117,10 @@
             <label for="">Step 3</label>
             <a href="{{ url('/back/google-api/upload-services') }}" class="btn btn-primary btn-block">Upload Services</a>
         </div>
+        <div class="col-md-2">
+            <label for="">Step 4</label>
+            <a href="{{ url('/back/google-api/upload-services-prices') }}" class="btn btn-primary btn-block">Services Prices</a>
+        </div>
     </div>
     <hr>
     <div class="row">

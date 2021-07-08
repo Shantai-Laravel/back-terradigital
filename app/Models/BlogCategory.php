@@ -26,6 +26,8 @@ class BlogCategory extends Model
                         'type',
                         'image_left',
                         'image_right',
+                        'stripe_product',
+                        'stripe_price',
                     ];
 
     public function translations()
