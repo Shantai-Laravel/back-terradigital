@@ -21,6 +21,7 @@ class PromotionTranslation extends Model
         'seo_title',
         'seo_description',
         'seo_keywords'
+        'bot_message'
     ];
 
     public function promotion()
