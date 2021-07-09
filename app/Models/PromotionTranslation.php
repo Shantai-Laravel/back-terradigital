@@ -20,7 +20,7 @@ class PromotionTranslation extends Model
         'seo_text',
         'seo_title',
         'seo_description',
-        'seo_keywords'
+        'seo_keywords',
         'bot_message'
     ];
 
