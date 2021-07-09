@@ -68,6 +68,16 @@
                                     </div>
                                 </div>
                                 <div class="row">
+                                    <div class="col-md-12">
+                                        <label>Bot Message[{{ $lang->lang }}]</label>
+                                        <input type="text" name="bot_message_{{ $lang->lang }}" class="form-control"
+                                        @foreach($category->translations as $translation)
+                                        @if ($translation->lang_id == $lang->id)
+                                        value="{{ $translation->bot_message }}"
+                                        @endif
+                                        @endforeach
+                                        >
+                                    </div>
                                     <div class="col-md-4">
                                         <label>Package Text 1[{{ $lang->lang }}]</label>
                                         <input type="text" name="package_1_{{ $lang->lang }}" class="form-control"

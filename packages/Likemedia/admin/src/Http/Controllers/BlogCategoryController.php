@@ -253,6 +253,7 @@ class BlogCategoryController extends Controller
                 'package_1' => request('package_1_' . $lang->lang),
                 'package_2' => request('package_2_' . $lang->lang),
                 'package_3' => request('package_3_' . $lang->lang),
+                'bot_message' => request('bot_message_' . $lang->lang),
             ]);
         endforeach;
 

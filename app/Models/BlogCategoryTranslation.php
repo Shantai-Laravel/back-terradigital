@@ -27,6 +27,7 @@ class BlogCategoryTranslation extends Model
                         'package_1',
                         'package_2',
                         'package_3',
+                        'bot_message'
                     ];
 
     public function category()
