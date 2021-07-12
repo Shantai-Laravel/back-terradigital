@@ -118,7 +118,21 @@
                         @endforeach
                         @endif
                     </div>
+                    
                     <div class="col-md-4">
+                        <div class="form-group">
+                            <div class="form-group">
+                                <label for="video">Promotion Video</label>
+                                <input type="file" name="video" id="video"/>
+                                <br>
+                                @if ($promotion->video)
+                                    <video src="{{ asset('images/promotions/'. $promotion->video ) }}" width="100%" controls></video>
+                                    <input type="hidden" name="video_old" value="{{ $promotion->video }}"/>
+                                @endif
+                                <hr>
+                            </div>
+                        </div>
+
                         <div class="form-group">
                             <div class="form-group">
                                 <label for="img">Promotion Banner</label>

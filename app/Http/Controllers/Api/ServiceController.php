@@ -55,7 +55,7 @@ class ServiceController extends ApiController
 
         $data['promotions'] = Promotion::with(['translation', 'promoSections.translation'])
                                 ->where('active', 1)
-                                ->orderBy('position', 'asc')
+                                ->orderBy('id', 'desc')
                                 ->get();
 
         $data['pages'] = StaticPage::with(['translation'])->get();

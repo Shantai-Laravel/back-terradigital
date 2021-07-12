@@ -88,11 +88,13 @@ class PromotionsController extends Controller
 
     public function update(Request $request, $id)
     {
+        // dd($request->file('video'));
         $toValidate['title_'.$this->lang->lang] = 'required|max:255';
         $validator = $this->validate($request, $toValidate);
 
         $img = $request->img_old;
         $img_mobile = $request->img_old_mobile;
+        $videoName = $request->video_old;
 
         if (!empty($request->file('img'))) {
             $img = time() . '-' . $request->img->getClientOriginalName();
@@ -105,12 +107,21 @@ class PromotionsController extends Controller
         }
 
         $promotion = Promotion::findOrFail($id);
+
         if (!$promotion->alias) {
             $promotion->alias = str_slug(request('title_en'));
         }
+
+        if ($request->file('video')) {
+            $videoName = uniqid().$request->file('video')->getClientOriginalName();
+            $path = public_path().'/images/promotions/';
+            $request->file('video')->move($path, $videoName);
+        }
+
         $promotion->active = 1;
         $promotion->position = 1;
         $promotion->img = $img;
+        $promotion->video = $videoName;
         $promotion->img_mobile = $img_mobile;
         $promotion->discount  = $request->discount;
         $promotion->save();

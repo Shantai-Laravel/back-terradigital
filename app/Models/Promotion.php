@@ -15,6 +15,7 @@ class Promotion extends Model
         'on_home',
         'img',
         'img_mobile',
+        'video',
         'discount',
         'homewear',
         'bijoux',
