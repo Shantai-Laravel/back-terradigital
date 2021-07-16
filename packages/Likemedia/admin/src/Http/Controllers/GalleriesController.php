@@ -49,7 +49,7 @@ class GalleriesController extends Controller
                     $image_resize->save(public_path('images/galleries/og/' .$name), 75);
                     $type = "image";
                     $name = '/images/galleries/og/' . $name;
-                }else{
+                } else {
                     $path = public_path('images/galleries/videos/');
                     $file->move($path, $name);
                     $type = "video";

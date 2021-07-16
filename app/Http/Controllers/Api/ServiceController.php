@@ -15,6 +15,8 @@ use App\Models\BlogCategory;
 use App\Models\Banner;
 use App\Models\Promotion;
 use App\Models\StaticPage;
+use Revolution\Google\Sheets\Facades\Sheets;
+
 
 class ServiceController extends ApiController
 {
@@ -62,6 +64,30 @@ class ServiceController extends ApiController
 
 
         return $this->respond($data);
+    }
+
+    public function addLeads(Request $request)
+    {
+        try {
+            $lead = [
+                'Full_Name' => $request->get('name'),
+                'Email' => $request->get('email'),
+                'Phone' => $request->get('phone'),
+                'Age' => $request->get('age'),
+                'Comments' => $request->get('comments'),
+                'Whatsapp' => $request->get('whatsapp'),
+                'Messenger' => $request->get('messenger'),
+                'Canal_Preferat' => $request->get('preferred'),
+            ];
+
+            $sheet = Sheets::spreadsheet('1jtC_rIlJiHbMZN5Ff21tvIlw2nWejF0zSBxbJsCz0Zs')
+                           ->sheetById(0)
+                           ->append([$lead]);
+
+            return 'ok';
+        } catch (\Exception $e) {
+            return $this->respondError("Error send to AmoCrm", 500);
+        }
     }
 
     public function all($lang)

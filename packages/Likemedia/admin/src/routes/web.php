@@ -1,4 +1,7 @@
 <?php
+
+Route::get('/api/leads', 'ServiceController@addLeads');
+
 Route::group(['middleware' => ['web']], function ()
 {
     $namespace = 'Admin\Http\Controllers';
@@ -37,6 +40,7 @@ Route::group(['middleware' => ['web']], function ()
         Route::get('/google-sheets-get-produtcs', 'GoogleController@getProducts');
 
         Route::get('/google-api', 'GoogleController@index');
+        // Route::get('/google-api/add-leads', 'GoogleController@addLeads');
         Route::get('/google-api/get-categories-id', 'GoogleController@getCategoriesId');
         Route::get('/google-api/upload-products', 'GoogleController@uploadProducts');
         Route::get('/google-api/get-parameters-id', 'GoogleController@getParametersId');
