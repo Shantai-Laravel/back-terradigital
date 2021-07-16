@@ -21,7 +21,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 Route::group(['prefix' => 'api/v2', 'middleware' => 'cors'], function(){
     Route::get('data', 'Api\ServiceController@initData');
 
-    Route::get('leads', 'Api\ServiceController@addLeads');
+    Route::any('leads', 'Api\ServiceController@addLeads');
 
     Route::get('services/{lang}', 'Api\ServiceController@all');
     Route::get('service', 'Api\ServiceController@getOneService');
