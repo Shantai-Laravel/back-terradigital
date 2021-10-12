@@ -1188,8 +1188,8 @@ class GoogleController extends Controller
         echo $view->render();
 
 
-        $sheets = Sheets::spreadsheet(config('sheets.post_spreadsheet_id'))
-                       ->sheetById(1428212910)
+        $sheets = Sheets::spreadsheet('1QZZZiqVByIpbd5RKuSXuZa5grsvQD-3y2uuK6pfizdg')
+                       ->sheetById(150513246)
                        ->all();
 
         $sheets = $this->parseSheetWithLangs($sheets);
@@ -1629,8 +1629,8 @@ class GoogleController extends Controller
          $view = view('admin::admin.google.progressBar', compact('data'));
          echo $view->render();
 
-         $sheets =  Sheets::spreadsheet('1nV7hcDrRylO8hGFywrFH4rSpngAQc7eSyxWT0WnncHI')
-                        ->sheetById(1355186422)
+         $sheets =  Sheets::spreadsheet('16Qa3Quke3GnvlZtW2hBQ3e-57PEnMF2KtBsUgsKLMbI')
+                        ->sheetById(438857730)
                         ->all();
 
          $sheets = $this->parseSheetWithLangs($sheets);
@@ -1670,8 +1670,8 @@ class GoogleController extends Controller
          $view = view('admin::admin.google.progressBar', compact('data'));
          echo $view->render();
 
-         $sheets =  Sheets::spreadsheet('1nV7hcDrRylO8hGFywrFH4rSpngAQc7eSyxWT0WnncHI')
-                        ->sheetById(284807038)
+         $sheets =  Sheets::spreadsheet('16Qa3Quke3GnvlZtW2hBQ3e-57PEnMF2KtBsUgsKLMbI')
+                        ->sheetById(2094409301)
                         ->all();
 
          $sheets = $this->parseSheetWithLangs($sheets);
@@ -1713,8 +1713,8 @@ class GoogleController extends Controller
          $view = view('admin::admin.google.progressBar', compact('data'));
          echo $view->render();
 
-         $sheet = Sheets::spreadsheet('1nV7hcDrRylO8hGFywrFH4rSpngAQc7eSyxWT0WnncHI')
-                        ->sheetById(1355186422)
+         $sheet = Sheets::spreadsheet('16Qa3Quke3GnvlZtW2hBQ3e-57PEnMF2KtBsUgsKLMbI')
+                        ->sheetById(438857730)
                         ->all();
 
          $rows = $this->parseSheetWithLangs($sheet);
@@ -1840,7 +1840,7 @@ class GoogleController extends Controller
          $view = view('admin::admin.google.progressBar', compact('data'));
          echo $view->render();
 
-         $sheet = Sheets::spreadsheet('1nV7hcDrRylO8hGFywrFH4rSpngAQc7eSyxWT0WnncHI')
+         $sheet = Sheets::spreadsheet('16Qa3Quke3GnvlZtW2hBQ3e-57PEnMF2KtBsUgsKLMbI')
                         ->sheetById(284807038)
                         ->all();
 
@@ -1881,8 +1881,8 @@ class GoogleController extends Controller
          $view = view('admin::admin.google.progressBar', compact('data'));
          echo $view->render();
 
-         $sheet = Sheets::spreadsheet('1nV7hcDrRylO8hGFywrFH4rSpngAQc7eSyxWT0WnncHI')
-                        ->sheetById(1382075987)
+         $sheet = Sheets::spreadsheet('16Qa3Quke3GnvlZtW2hBQ3e-57PEnMF2KtBsUgsKLMbI')
+                        ->sheetById(633845904)
                         ->all();
 
          $rows = $this->parseSheetWithLangs($sheet);
