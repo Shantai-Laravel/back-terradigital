@@ -11,17 +11,8 @@ let mix = require('laravel-mix');
  |
  */
 
- // mix.js('resources/assets/js/app_front.js', 'public/fronts/js');
- //
- // mix.js('resources/assets/js/app_admin.js', 'public/admin/js');
- //
- // mix.sass('resources/assets/sass/app.scss', 'public/fronts/css');
- //
- // mix.config.fileLoaderDirs.fonts = 'public/fronts/fonts';
 
- mix.js('resources/assets/js/app_mobile.js', 'public/fronts_mobile/js');
-
-// mix.js('resources/assets/js/app_desktop.js', 'public/fronts/js');
+mix.js('resources/assets/js/app_mobile.js', 'public/fronts_mobile/js');
 
 mix.js('resources/assets/js/app_admin.js', 'public/admin/js');
 
